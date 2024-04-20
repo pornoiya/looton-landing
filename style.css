@@ -1,0 +1,240 @@
+:root {
+  font-family: Inter, sans-serif;
+  /* line-height: 1.2; */
+  font-weight: 400;
+
+  --looton-black: #000;
+  --looton-white: #FFF;
+  --looton-bgr-grey: #F8F8F8;
+  --looton-green: #40F988;
+  --looton-light-grey: #E2E2E2;
+
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.15rem;
+  white-space: pre;
+}
+
+.main-screen {
+  height: clamp(800px, 100vh, 100vh);
+  width: 100vw;
+  background-color: var(--looton-black);
+  border-radius: 0 0 30px 30px;
+  /* padding: clamp(14px, 1.5%, 40px) 10vw 0px; */
+  padding: clamp(14px, 1.5%, 40px) 12vw 0px;
+}
+
+.header {
+  height: clamp(45px, .8vh, 10rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__right-part-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.nav-wrapper {
+  width: auto;
+  padding: 1rem 3.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--looton-green);
+}
+
+.page-navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.page-navigation__item {
+  cursor: pointer;
+
+  color: #A1A5AB;
+
+  letter-spacing: -0.352px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.page-navigation__item:hover {
+  color: var(--looton-white);
+}
+
+.page-navigation__cta-button {
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  background-color: var(--looton-white);
+  border-radius: 40px;
+  font-size: 1.8rem;
+  border: 1px solid transparent;
+  display: flex;
+  gap: 1.5rem
+}
+
+.main-screen__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: clamp(75px, 9vh, 10vh);
+}
+
+.main-screen__content__left {
+  display: flex;
+  flex-direction: column;
+  gap: 6.5rem;
+}
+
+.page-header {
+  background: -webkit-linear-gradient(0.50turn, #E2E2E2, #BCBCBC, #E8E8E8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-description {
+  color: var(--looton-light-grey);
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: -0.024rem;
+  white-space: pre;
+}
+
+.page__cta-button {
+  cursor: pointer;
+  max-width: 26.5rem;
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  padding: 1.8rem 4.8rem;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  font-size: 3rem;
+  gap: 2.5rem
+}
+
+.page__cta-button:hover, .page-navigation__cta-button:hover {
+  transition: padding .3s;
+  transform: scale(1.03);
+}
+
+.page__cta-button:hover img, .page-navigation__cta-button:hover img {
+  transform: rotate(45deg);
+  transition: transform .2s ease-in-out;
+}
+
+.page__cta-button img {
+  width: 2rem;
+}
+
+.page__cta-button_gradient {
+  background: linear-gradient(90deg, var(--looton-green) 58.5%, #23F7D1 100%), linear-gradient(90deg, var(--looton-green) 0%, #51D6A8 100%);
+}
+
+.looton-screen__enlighter {
+  position: absolute;
+  z-index: 0;
+
+  width: 28vw;
+  right: 10rem;
+  height: 68vh;
+  flex-shrink: 0;
+  border-radius: 558px;
+  background: rgba(143, 139, 139, 0.30);
+  filter: blur(100px);
+}
+
+.looton-screen-wrapper img {
+  z-index: 100;
+  max-width: 28vw;
+  height: clamp(47vh, 79vh, 90vh);
+}
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+/* 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
