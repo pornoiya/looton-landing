@@ -7,7 +7,7 @@
     <title>Looton</title>
   </head>
   <body>
-    <div class="main-screen">
+    <section class="screen main-screen">
       <div class="header">
         <div class="looton-logo">
           <img src="public/pictures/looton-logo.svg" alt="Looton logo"/>
@@ -28,7 +28,7 @@
       <div class="main-screen__content">
         <div class="main-screen__content__left">
           <div>
-            <h1 class="page-header">Looton — сервис&NewLine;для покупки новых&NewLine;вещей и ресейла</h1>
+            <h1 class="page-header__large">Looton — сервис&NewLine;для покупки новых&NewLine;вещей и ресейла</h1>
             <h3 class="page-description">Продавайте одежду и аксессуары с комиссией до 5%,&NewLine;покупайте оригинальные вещи быстро и безопасно</h3>  
           </div>
          <button class="page__cta-button page__cta-button_gradient">Скачать<img src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
@@ -38,7 +38,38 @@
           <img src="public/pictures/screen-1.png" alt="looton application main screen" />
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Screen 2 -->
+    <section class="screen profits-screen">
+      <div class="caption-chip">Преимущества</div>
+      <h2 class="page-header">Продавайте выгодно и безопасно</h2>
+      <div class="profit-cards-container">
+      <div class="profit-cards-container__card">
+        <div class="profit-card__header-icon-container">
+          <h5 class="profit-card__content__header">Первая сделка –– &NewLine;без комиссии</h5>
+          <div class="profit-card__content__icon">
+            <img src="public/icons/profits-card-present-icon.jpg" />
+          </div>
+        </div>
+        <p class="profit-card__description">Разместите свой первый лот, Looton не возьмёт комиссию с его продажи</p></div>
+      <div class="profit-cards-container__card">
+        <div class="profit-card__header-icon-container">
+          <h5 class="profit-card__content__header">Сервисный&NewLine;сбор 5%</h5>
+          <div class="profit-card__content__icon">
+            <img src="public/icons/profits-card-coin-icon.jpg" />
+          </div>
+        </div>
+        <p class="profit-card__description">Комиссия сервиса за продажу вещи не превышает 5%. Размещение лота –– абсолютно бесплатно</p></div>
+      <div class="profit-cards-container__card">
+        <div class="profit-card__header-icon-container">
+          <h5 class="profit-card__content__header">Страхование&NewLine;заказа</h5>
+          <div class="profit-card__content__icon">
+            <img src="public/icons/profits-card-lock-icon.jpg" />
+          </div>
+        </div>
+        <p class="profit-card__description">Выплатим 100% компенсацию, если посылку повредят или потеряют</p></div>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
