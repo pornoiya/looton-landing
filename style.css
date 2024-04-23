@@ -180,7 +180,7 @@ h1 {
 
 /* Screen 2 */
 
-.profits-screen {
+.profits-screen, .instructions-screen {
   background-color: var(--looton-bgr-grey);
   display: flex;
   flex-direction: column;
@@ -229,7 +229,7 @@ h1 {
   justify-content: space-between;
 }
 
-.profit-cards-container__card:hover, .profits-customer-grid__card:hover {
+.profit-cards-container__card:hover, .profits-customer-grid__card:hover, .instructions-grid__card:hover  {
   filter: drop-shadow(0 0.4rem 1rem #F0EFEF);
 }
 
@@ -434,8 +434,6 @@ h1 {
   padding-left: 2rem;
 }
 
-
-
 .avatar img {
   border-radius: 100%;
   width: 6rem;
@@ -449,33 +447,109 @@ h1 {
   overflow-y: auto;
 }
 
-.message-in-chat {
-  overflow: hidden;
-  color: var(--looton-black);
+/* Screen 4 */
+.customer-seller-toggle-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: left;
+}
+
+.customer-seller-toggle {
+  border-radius: 2.5rem;
+  border: 2px solid var(--looton-black);
+  padding: 0.5rem 1.5rem;
+  text-align: center;
   font-size: 1.4rem;
+  line-height: 110%; /* 17.6px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+}
+
+.customer-seller-toggle .arrow {
+  width: 1rem;
+  height: 1rem;
+}
+input[name="instructions"] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.customer-seller-toggle__checked {
+  background-color: var(--looton-black);
+  color: var(--looton-white);
+}
+
+.customer-seller-toggle__checked .arrow {
+  display: none;
+}
+
+.instructions-grid {
+  max-height: 77.5rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: repeat(2, 38rem);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.instructions-grid__card {
+  color: var(--looton-black);
+  background-color: var(--looton-white);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.044rem;
+  border-radius: 20px;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.instructions-grid__card:nth-child(even) {
+  background-color: var(--looton-green);
+}
+
+.instructions-grid__card__header-id-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.instructions-grid__card__header {
+  width: 60%;
+  font-size: 2.7rem;
+  font-style: normal;
   font-weight: 500;
-  line-height: 120%;
-  letter-spacing: -0.026rem;
+  line-height: 100%; /* 30px */
+  letter-spacing: -0.057rem;
 }
 
-.messageClient {
-  height: 6rem;
-  max-width: 286px;
-  /* left: 10px; */
-  width: 80%;
-  float: left;
-  padding: 1.4rem 2.1rem 1.4rem 3rem;
-  background: url("public/pictures/dialog-shape.svg") no-repeat;
+.instructions-grid__card__id {
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%; /* 40px */
+  letter-spacing: -0.11rem;
 }
 
-.messageManager {
-  height: 6rem;
-  max-width: 286px;
-  width: 80%;
-  float: right;
-  padding: 1.4rem 2.1rem;
-  background: url("public/pictures/green-dialog-shape.svg") no-repeat;
+.instructions-grid__card__description {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.044rem;
 }
+
+.instructions-grid__hidden {
+  display: none;
+}
+
 
 /* #app {
   max-width: 1280px;

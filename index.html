@@ -115,15 +115,6 @@
             <h5 class="profit-customer-card__header">Онлайн поддержка 24/7</h5>
             <p class="profit-card__description">Ответим на&nbsp;все интересующие вас вопросы на&nbsp;любом этапе заказа</p>
           </div>
-          <!-- <div class="online-support__chat-container">
-            <div class="message-in-chat">
-                <div class="messageManager">Добрый день! А&nbsp;сколько времени занимает доставка?
-                </div>
-            </div>
-            <div class="message-in-chat">
-                <div class="messageClient">Здравствуйте! Обычно доставка занимает до&nbsp;7&nbsp;рабочих дней.</div>
-            </div>
-          </div> -->
           <div class="online-support__chat-container">
             <div class="online-support__chat-participant online-support__chat-participant_right">
               <div class="dialog dialog__right">
@@ -145,6 +136,134 @@
         </div>
       </div>
     </section>
+
+    <!-- Screen 4 -->
+    <section class="screen instructions-screen">
+      <div class="customer-seller-toggle-container">
+        <button class="customer-seller-toggle" id="instructions__sellers" onclick="">
+          Для продавцов 
+          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
+        </button>
+        <button class="customer-seller-toggle" id="instructions__customers">
+          Для покупателей 
+          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
+        </button>
+
+        
+        <!-- <input type="radio" id="instructions__sellers" name="instructions" value="sellers" checked />
+        <label class="customer-seller-toggle" for="instructions__sellers">
+          Для продавцов 
+          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
+        </label>
+        <input type="radio" id="instructions__customers" name="instructions" value="customers" />
+        <label class="customer-seller-toggle" for="instructions__customers">
+          Для покупателей
+          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
+        </label> -->
+      </div>
+      <h2 class="page-header">Как работает Looton</h2>
+      <div class="instructions-grid sellers">
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Подготовьте вещь к&nbsp;продаже</h5>
+            <h3 class="instructions-grid__card__id">01</h3>
+          </div>
+          <p class="instructions-grid__card__description">Приведите вещь в&nbsp;надлежащий вид: постирайте или&nbsp;сдайте 
+            в&nbsp;химчистку при&nbsp;необходимости.
+            Сфотографируйте вещь 
+            на&nbsp;нейтральном фоне, следуя подсказкам в&nbsp;приложении.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Разместите объявление</h5>
+            <h3 class="instructions-grid__card__id">02</h3>
+          </div>
+          <p class="instructions-grid__card__description">Напишите размер и&nbsp;материал вещи, её&nbsp;состояние и&nbsp;дефекты. Укажите иную информацию, которая будет полезна покупателю.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Дождитесь проверки объявления</h5>
+            <h3 class="instructions-grid__card__id">03</h3>
+          </div>
+          <p class="instructions-grid__card__description">В&nbsp;среднем это&nbsp;занимает примерно 2&nbsp;часа. 
+            Если объявление прошло проверку, оно появится на&nbsp;главной странице сервиса.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Дождитесь оформления заказа</h5>
+            <h3 class="instructions-grid__card__id">04</h3>
+          </div>
+          <p class="instructions-grid__card__description">Упакуйте и&nbsp;отправьте вещь 
+            в&nbsp;любом пункте СДЭК.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Получите выплату</h5>
+            <h3 class="instructions-grid__card__id">05</h3>
+          </div>
+          <p class="instructions-grid__card__description">Банк зарезрвирует деньги за&nbsp;покупку, а&nbsp;мы отправим их, когда покупатель получит товар и&nbsp;убедится, что он соответствует описанию.</p>
+        </div>
+      </div>
+
+      <div class="instructions-grid customers instructions-grid__hidden">
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Создание объявления</h5>
+            <h3 class="instructions-grid__card__id">01</h3>
+          </div>
+          <p class="instructions-grid__card__description">В&nbsp;описании товара указываются размер и&nbsp;материал вещи, её состояние и&nbsp;дефекты, а&nbsp;так же город, из&nbsp;которого будет отправлен заказ.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Модерация</h5>
+            <h3 class="instructions-grid__card__id">02</h3>
+          </div>
+          <p class="instructions-grid__card__description">Наши модераторы и&nbsp;эксперты проверяют объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Публикация на&nbsp;главной странице</h5>
+            <h3 class="instructions-grid__card__id">03</h3>
+          </div>
+          <p class="instructions-grid__card__description">Если эксперты сделали вывод об&nbsp;оригинальности товара и&nbsp;соответствии описанию.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Оформление заказа</h5>
+            <h3 class="instructions-grid__card__id">04</h3>
+          </div>
+          <p class="instructions-grid__card__description">Выберите удобный пункт самовывоза в&nbsp;приложении 
+            и укажите данные получателя.</p>
+        </div>
+        <div class="instructions-grid__card">
+          <div class="instructions-grid__card__header-id-container">
+            <h5 class="instructions-grid__card__header">Получение товара</h5>
+            <h3 class="instructions-grid__card__id">05</h3>
+          </div>
+          <p class="instructions-grid__card__description">Убедитесь, что товар соответствует описанию. После&nbsp;вашего подтверждения деньги за&nbsp;заказ перечислятся на&nbsp;счёт продавца.</p>
+        </div>
+      </div>
+    </section>
     <script type="module" src="/main.js"></script>
+    <script>
+        const sellersInstructionsChip = document.getElementById("instructions__sellers")
+        const customersInstructionsChip = document.getElementById("instructions__customers")
+        const sellersInstructions = document.getElementsByClassName("instructions-grid sellers")?.[0]
+        const customersInstructions = document.getElementsByClassName("instructions-grid customers")?.[0]
+
+        sellersInstructionsChip.addEventListener('click', function () {
+          customersInstructionsChip.classList.remove("customer-seller-toggle__checked");
+          sellersInstructionsChip.classList.add("customer-seller-toggle__checked");
+          sellersInstructions.classList.remove("instructions-grid__hidden")
+          customersInstructions.classList.add("instructions-grid__hidden")
+        })
+
+        customersInstructionsChip.addEventListener('click', function () {
+          sellersInstructionsChip.classList.remove("customer-seller-toggle__checked");
+          customersInstructionsChip.classList.add("customer-seller-toggle__checked");
+          customersInstructions.classList.remove("instructions-grid__hidden")
+          sellersInstructions.classList.add("instructions-grid__hidden")
+        })
+    </script>
   </body>
 </html>
