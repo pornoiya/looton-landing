@@ -115,6 +115,7 @@ button {
 .main-screen__content__left {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 6.5rem;
 }
 
@@ -141,8 +142,7 @@ button {
 }
 
 .page__cta-button {
-  cursor: pointer;
-  /* max-width: 26.5rem; */
+  width: auto;
   display: flex;
   align-items: center;
   height: 7rem;
@@ -760,10 +760,10 @@ svg {
 
 .application-screen-container {
   background-color: #000;
-  border-radius: 55px;
+  border-radius: 60px;
   box-shadow:
-  0 0 60px 5px #484848,  /* inner white */
-  0 0 140px 5px #1D1D1D/* outer cyan */
+  0 0 50px 5px #313030,  /* inner white */
+  0 0 100px 5px #272727
 }
 
 .application-screen-container .application-screen {
