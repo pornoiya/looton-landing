@@ -669,14 +669,15 @@ h1 {
   padding-right: 3rem;
   background-color: var(--looton-white);
   border-radius: 30px;
-  height: 46rem;
+  height: 42rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("public/pictures/white-cube-transparent.png"), 
   url("public/pictures/upturned-white-cube-transparent.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: center left, center right;
+  background-position: bottom -80% left 5%, top 20% right 8%;
+  background-size: auto 80%, auto 60%;
 }
 
 .blog-screen-bgr {
