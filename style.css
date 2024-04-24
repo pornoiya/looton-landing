@@ -122,11 +122,14 @@ h1 {
 }
 
 .page-description {
-  color: var(--looton-light-grey);
   font-size: 2.2rem;
   font-weight: 400;
   letter-spacing: -0.024rem;
   white-space: pre;
+}
+
+.page-description_grey {
+  color: var(--looton-light-grey);
 }
 
 .page__cta-button {
@@ -148,12 +151,12 @@ h1 {
   transform: scale(1.03);
 }
 
-.page__cta-button:hover img, .page-navigation__cta-button:hover img {
+.page__cta-button:hover .arrow, .page-navigation__cta-button:hover .arrow {
   transform: rotate(45deg);
   transition: transform .2s ease-in-out;
 }
 
-.page__cta-button img {
+.page__cta-button .arrow {
   width: 2rem;
 }
 
@@ -472,11 +475,6 @@ h1 {
   width: 1rem;
   height: 1rem;
 }
-/* input[name="instructions"] {
-  visibility: hidden;
-  height: 0;
-  width: 0;
-} */
 
 .customer-seller-toggle__checked {
   background-color: var(--looton-black);
@@ -575,6 +573,7 @@ h1 {
 .ticker-container {
   width: 100%;
   margin-top: 6rem;
+  margin-bottom: 15rem;
   display: flex;
   flex-direction: column;
   gap: 5rem
@@ -663,13 +662,66 @@ h1 {
   }
 }
 
+/* Screen blog */
+
+.blog-screen {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: var(--looton-white);
+  border-radius: 30px;
+  height: 46rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("public/pictures/white-cube-transparent.png"), 
+  url("public/pictures/upturned-white-cube-transparent.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center left, center right;
+}
+
+.blog-screen-bgr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: start;
+}
+
+.blog-screen__content__header-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.blog-screen__content__header-description-wrapper .page-header {
+  margin: 0;
+}
+
+.blog-screen__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 7rem;
+}
+
+.page__cta-button_black {
+  background-color: var(--looton-black);
+  color: var(--looton-white);
+}
+
+.page__cta-button_black 
+
+svg {
+  fill: currentColor;
+}
 
 /* 
 .ticker-brands-container {
   height: clamp(5rem, 13rem, 15rem);
   max-height: 15rem;
   animation: run-ticker 14s infinite linear;
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8rem;
