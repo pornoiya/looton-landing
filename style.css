@@ -573,7 +573,7 @@ button {
 }
 
 /* To-Do: replace */
-.instructions-grid__hidden, .hidden {
+.instructions-grid__hidden {
   display: none;
 }
 
@@ -823,11 +823,10 @@ svg {
 
   overflow: hidden;
   border-radius: 3rem;
-  width: 129rem;
 }
 
 .screen-launch-form__container__left {
-  padding: 8rem 6.5rem;
+  padding: 6rem 4rem;
   align-items: start;
   justify-content: start;
 }
@@ -885,6 +884,13 @@ svg {
   gap: 1.5rem;
 }
 
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 13rem;
+}
+
 .faq-question-answer__header-icon-container {
   display: flex;
   justify-content: space-between;
@@ -914,6 +920,53 @@ svg {
   width: 100%;
 }
 
+.faq-answer {
+  display: none;
+}
+
+#answer_seller_first, #answer_seller_second, 
+#answer_seller_third, #answer_seller_fourth, 
+#answer_seller_fifth,
+#answer_customer_first, #answer_customer_second, 
+#answer_customer_third, #answer_customer_fourth {
+  display: none;
+}
+
+#answer_seller_first:checked + .faq-answer, 
+#answer_seller_second:checked + .faq-answer,
+#answer_seller_third:checked + .faq-answer,
+#answer_seller_fourth:checked + .faq-answer, 
+#answer_seller_fifth:checked + .faq-answer,
+#answer_customer_first:checked + .faq-answer,
+#answer_customer_second:checked + .faq-answer, 
+#answer_customer_third:checked + .faq-answer,
+ #answer_customer_fourth:checked + .faq-answer
+ {
+  display: block;
+  animation: fade-in .8s;
+}
+
 .card-description_shortened {
   width: 85%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.faq-question-answer__icon-wrap > .plus-icon {
+  transition: transform .3s;
+}
+
+.faq-question-answer__header-icon-container:has(+ input[type="checkbox"]:checked) .faq-question-answer__icon-wrap > .plus-icon {
+  transform: rotate(45deg);
+}
+
+.hidden {
+  display: none;
 }

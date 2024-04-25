@@ -15,7 +15,7 @@
         <div class="header__right-part-container">
           <div class="nav-wrapper">
             <nav class="page-navigation">
-              <a class="page-navigation__item" href="">О нас</a>
+              <a class="page-navigation__item" href="">О&nbsp;нас</a>
               <a class="page-navigation__item" href="">Преимущества</a> 
               <a class="page-navigation__item" href="">FAQ</a> 
               <a class="page-navigation__item" href="">Контакты</a> 
@@ -28,7 +28,7 @@
       <div class="main-screen__content">
         <div class="main-screen__content__left">
           <div>
-            <h1 class="page-header__gradient__large">Looton — сервис&NewLine;для покупки новых&NewLine;вещей и ресейла</h1>
+            <h1 class="page-header__gradient__large">Looton — сервис&NewLine;для&nbsp;покупки новых&NewLine;вещей и&nbsp;ресейла</h1>
             <h3 class="page-description page-description_grey">Продавайте одежду и аксессуары с комиссией до 5%,&NewLine;покупайте оригинальные вещи быстро и безопасно</h3>  
           </div>
          <button class="page__cta-button page__cta-button_gradient">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
@@ -418,11 +418,11 @@
     <!-- Screen FAQ -->
     <section class="screen screen-faq">
       <div class="customer-seller-toggle-container">
-        <button class="customer-seller-toggle customer-seller-toggle__checked" id="faq__sellers" onclick="">
+        <button class="customer-seller-toggle customer-seller-toggle__checked" id="chip-faq__sellers">
           Для продавцов 
           <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
         </button>
-        <button class="customer-seller-toggle" id="faq__customers">
+        <button class="customer-seller-toggle" id="chip-faq__customers">
           Для покупателей 
           <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
         </button>
@@ -430,13 +430,106 @@
       <h2 class="page-header">Спрашивают чаще всего</h2>
       <div class="faq-container faq__sellers">
         <article class="faq-question-answer">
-          <div class="faq-question-answer__header-icon-container">
+          <label for="answer_seller_first" class="faq-question-answer__header-icon-container">
             <h4 class="card-title">Какой процент берёт Looton за&nbsp;продажу?</h4>
             <div class="faq-question-answer__icon-wrap">
-              <img src="public/icons/plus-icon.svg" alt="answer-toggle">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
             </div>
-          </div>
-          <p class="card-description card-description_shortened">Размещение первого объявления на&nbsp;платформе Looton –– бесплатно. С&nbsp;каждой последующей продажи сервис берёт комиссию, которая не&nbsp;превышает 5%.</p>
+          </label>
+          <input id="answer_seller_first" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Размещение первого объявления на&nbsp;платформе Looton –– бесплатно. С&nbsp;каждой последующей продажи сервис берёт комиссию, которая не&nbsp;превышает 5%.</p>
+        </article>
+
+        <article class="faq-question-answer">
+          <label for="answer_seller_second" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Как получить деньги?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_seller_second" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Для&nbsp;поступления средств понадобится только номер карты. Укажите его при&nbsp;создании объявления.</p>
+        </article>
+
+        <article class="faq-question-answer">
+          <label for="answer_seller_third" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Можно ли продавать подделку?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_seller_third" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Наши модераторы и&nbsp;эксперты проверяют каждое объявление на&nbsp;соответствие описанию и&nbsp;подлинность. В&nbsp;случае, если удалось установить подделку, аккаунт будет навсегда заблокирован на&nbsp;платформе. </p>
+        </article>
+
+        <article class="faq-question-answer">
+          <label for="answer_seller_fourth" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Есть ли возможность продавать в&nbsp;большом количестве?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_seller_fourth" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Да. Вы можете указать размер и&nbsp;количество товара (до 100 шт.) при&nbsp;создании лота.</p>
+        </article>
+
+        <article class="faq-question-answer">
+          <label for="answer_seller_fifth" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Моя вещь может потеряться или&nbsp;получить повреждения во&nbsp;время доставки?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_seller_fifth" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Мы доверяем доставку заказов ТК СДЭК –– лидеру российской логистики. Если посылка теряется, обычно её быстро находят. К сожалению, нельзя полностью исключить вероятность повреждений товара. Если товар пришел с&nbsp;повреждением, мы выплатим 100% денежную компенсацию продавцу.</p>
+        </article>
+      </div>
+
+      
+
+      <div class="faq-container faq__customers hidden">
+        <article class="faq-question-answer">
+          <label for="answer_customer_first" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Безопасно ли&nbsp;это?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_customer_first" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Да, Looton берёт на&nbsp;себя ответственность за&nbsp;безопасность сделки. При&nbsp;покупке лота банк резервирует денежные средства, а&nbsp;затем отправляет их на&nbsp;счёт Looton. Фактическое списание средств происходит только после того, как&nbsp;покупатель подтвердит, что с&nbsp;товаром всё в&nbsp;порядке.</p>
+        </article>
+
+        <article class="faq-question-answer">
+          <label for="answer_customer_second" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Я могу быть уверен, что&nbsp;покупаю оригинал?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_customer_second" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Да, мы гарантируем подлинность изделия. Наши модераторы и&nbsp;эксперты проверяют каждое объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
+        </article>
+
+        <article class="faq-question-answer">
+          <label for="answer_customer_third" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Сколько занимает доставка?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_customer_third" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">В&nbsp;среднем доставка занимает до&nbsp;7 рабочих дней.</p>
+        </article>
+        
+        <article class="faq-question-answer">
+          <label for="answer_customer_fourth" class="faq-question-answer__header-icon-container">
+            <h4 class="card-title">Я&nbsp;могу быть уверен, что посылка придет в&nbsp;сохранности?</h4>
+            <div class="faq-question-answer__icon-wrap">
+              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+            </div>
+          </label>
+          <input id="answer_customer_fourth" type="checkbox"></input>
+          <p class="card-description card-description_shortened faq-answer">Каждая посылка застрахована. Если товар пришел с&nbsp;повреждением, мы компенсируем ваши затраты на&nbsp;доставку.</p>
         </article>
       </div>
     </section>
@@ -460,6 +553,26 @@
           customersInstructionsChip.classList.add("customer-seller-toggle__checked");
           customersInstructions.classList.remove("instructions-grid__hidden")
           sellersInstructions.classList.add("instructions-grid__hidden")
+        })
+
+
+        const sellersFAQChip = document.getElementById("chip-faq__sellers")
+        const customersFAQChip = document.getElementById("chip-faq__customers")
+        const sellersFAQ = document.getElementsByClassName("faq__sellers")?.[0]
+        const customersFAQ = document.getElementsByClassName("faq__customers")?.[0]
+
+        sellersFAQChip.addEventListener('click', function () {
+          customersFAQChip.classList.remove("customer-seller-toggle__checked");
+          sellersFAQChip.classList.add("customer-seller-toggle__checked");
+          sellersFAQ.classList.remove("hidden")
+          customersFAQ.classList.add("hidden")
+        })
+
+        customersFAQChip.addEventListener('click', function () {
+          sellersFAQChip.classList.remove("customer-seller-toggle__checked");
+          customersFAQChip.classList.add("customer-seller-toggle__checked");
+          customersFAQ.classList.remove("hidden")
+          sellersFAQ.classList.add("hidden")
         })
     </script>
   </body>
