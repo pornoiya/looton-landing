@@ -545,7 +545,8 @@ button {
   justify-content: space-between;
 }
 
-.instructions-grid__card__header {
+/* To-Do: rename to .card-title  */
+.instructions-grid__card__header, .card-title {
   width: 60%;
   font-size: 2.7rem;
   font-style: normal;
@@ -562,7 +563,8 @@ button {
   letter-spacing: -0.11rem;
 }
 
-.instructions-grid__card__description {
+/* To-Do: replace */
+.instructions-grid__card__description, .card-description {
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -570,7 +572,8 @@ button {
   letter-spacing: -0.044rem;
 }
 
-.instructions-grid__hidden {
+/* To-Do: replace */
+.instructions-grid__hidden, .hidden {
   display: none;
 }
 
@@ -758,7 +761,7 @@ svg {
 
 .application-screen-container {
   background-color: #000;
-  border-radius: 60px;
+  border-radius: 50rem;
   box-shadow:
   0 0 50px 5px #313030,  /* inner white */
   0 0 100px 5px #272727
@@ -871,4 +874,46 @@ svg {
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.03rem;
+}
+
+/* Screen FAQ */
+
+.screen-faq {
+  background-color: var(--looton-bgr-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-question-answer__header-icon-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.faq-question-answer {
+  background-color: var(--looton-white);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.faq-question-answer:hover {
+  box-shadow: 0px 4px 40px 0px #F0EFEF;
+}
+
+.faq-question-answer__icon-wrap {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+}
+
+.faq-question-answer__icon-wrap img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-description_shortened {
+  width: 85%;
 }
