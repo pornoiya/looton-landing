@@ -1,13 +1,11 @@
-import './style.css'
 import { toggleCustomerSeller } from './content-toggle'
 
-toggleCustomerSeller("instructions__sellers", "instructions__customers",
-"instructions-grid sellers", "instructions-grid customers",
-"customer-seller-toggle__checked", "hidden"
+toggleCustomerSeller("chip-instructions__sellers", "chip-instructions__customers",
+"instructions__sellers", "instructions__customers",
+"chip-customer-seller-toggle__checked", "hidden"
 );
-
 
 toggleCustomerSeller("chip-faq__sellers", "chip-faq__customers",
 "faq__sellers", "faq__customers",
-"customer-seller-toggle__checked", "hidden"
+"chip-customer-seller-toggle__checked", "hidden"
 );

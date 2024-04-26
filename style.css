@@ -222,7 +222,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   min-width: 108rem;
-  gap: 15px;
+  gap: 1.5rem;
   justify-content: stretch;
   margin-top: 2rem;
 }
@@ -465,7 +465,7 @@ button {
   margin-bottom: 2.5rem;
 }
 
-.customer-seller-toggle {
+.chip-customer-seller-toggle {
   border-radius: 2.5rem;
   border: 2px solid var(--looton-black);
   padding: 0.5rem 1.5rem;
@@ -479,17 +479,17 @@ button {
   background-color: transparent;
 }
 
-.customer-seller-toggle .arrow {
+.chip-customer-seller-toggle .arrow {
   width: 1rem;
   height: 1rem;
 }
 
-.customer-seller-toggle__checked {
+.chip-customer-seller-toggle__checked {
   background-color: var(--looton-black);
   color: var(--looton-white);
 }
 
-.customer-seller-toggle__checked .arrow {
+.chip-customer-seller-toggle__checked .arrow {
   display: none;
 }
 

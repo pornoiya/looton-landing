@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Looton</title>
   </head>
@@ -141,17 +142,17 @@
     <!-- Screen 4 -->
     <section class="screen instructions-screen">
       <div class="customer-seller-toggle-container">
-        <button class="customer-seller-toggle customer-seller-toggle__checked" id="instructions__sellers" onclick="">
+        <button class="chip-customer-seller-toggle chip-customer-seller-toggle__checked" id="chip-instructions__sellers" onclick="">
           Для продавцов 
           <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
         </button>
-        <button class="customer-seller-toggle" id="instructions__customers">
+        <button class="chip-customer-seller-toggle" id="chip-instructions__customers">
           Для покупателей 
           <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
         </button>
       </div>
       <h2 class="page-header">Как работает Looton</h2>
-      <div class="instructions-grid sellers">
+      <div class="instructions-grid" id="instructions__sellers">
         <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="card-title">Подготовьте&NewLine;вещь к&nbsp;продаже</h4>
@@ -194,7 +195,7 @@
         </article>
       </div>
 
-      <div class="instructions-grid customers hidden">
+      <div class="instructions-grid hidden" id="instructions__customers">
         <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="card-title">Создание объявления</h4>
@@ -421,17 +422,17 @@
     <!-- Screen FAQ -->
     <section class="screen screen-faq">
       <div class="customer-seller-toggle-container">
-        <button class="customer-seller-toggle customer-seller-toggle__checked" id="chip-faq__sellers">
+        <button class="chip-customer-seller-toggle chip-customer-seller-toggle__checked" id="chip-faq__sellers">
           Для продавцов 
           <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
         </button>
-        <button class="customer-seller-toggle" id="chip-faq__customers">
+        <button class="chip-customer-seller-toggle" id="chip-faq__customers">
           Для покупателей 
           <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
         </button>
       </div>
       <h2 class="page-header">Спрашивают чаще всего</h2>
-      <div class="faq-container faq__sellers">
+      <div class="faq-container faq__sellers" id="faq__sellers">
         <article class="faq-question-answer">
           <label for="answer_seller_first" class="faq-question-answer__header-icon-container">
             <h4 class="card-title">Какой процент берёт Looton за&nbsp;продажу?</h4>
@@ -487,10 +488,9 @@
           <p class="card-description card-description_shortened faq-answer">Мы доверяем доставку заказов ТК СДЭК –– лидеру российской логистики. Если посылка теряется, обычно её быстро находят. К сожалению, нельзя полностью исключить вероятность повреждений товара. Если товар пришел с&nbsp;повреждением, мы выплатим 100% денежную компенсацию продавцу.</p>
         </article>
       </div>
-
       
 
-      <div class="faq-container faq__customers hidden">
+      <div class="faq-container faq__customers hidden" id="faq__customers">
         <article class="faq-question-answer">
           <label for="answer_customer_first" class="faq-question-answer__header-icon-container">
             <h4 class="card-title">Безопасно ли&nbsp;это?</h4>
