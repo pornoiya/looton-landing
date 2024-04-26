@@ -22,7 +22,7 @@
               <a class="page-navigation__item" href="">Контакты</a> 
             </nav>
           </div>
-          <button class="page__cta-button button_medium button_white">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
+          <button id="cta-button-navigation" class="page__cta-button button_medium button_white">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
       <div class="caption-chip">Преимущества</div>
       <h2 class="page-header">Продавайте&NewLine;выгодно и&nbsp;безопасно</h2>
       <div class="profit-cards-container">
-      <div class="profit-cards-container__card">
+      <article class="profit-cards-container__card">
         <div class="profit-card__header-icon-container">
           <h4 class="profit-card__content__header">Первая сделка –– &NewLine;без&nbsp;комиссии</h4>
           <div class="profit-card__content__icon">
@@ -53,16 +53,17 @@
           </div>
         </div>
         <p class="profit-card__description">Разместите свой первый лот, Looton не возьмёт комиссию с&nbsp;его продажи</p>
-      </div>
-      <div class="profit-cards-container__card">
+      </article>
+      <article class="profit-cards-container__card">
         <div class="profit-card__header-icon-container">
           <h4 class="profit-card__content__header">Сервисный&NewLine;сбор 5%</h4>
           <div class="profit-card__content__icon">
             <img src="public/icons/profits-card-coin-icon.jpg" />
           </div>
         </div>
-        <p class="profit-card__description">Комиссия сервиса за&nbsp;продажу вещи не превышает 5%. Размещение лота –– абсолютно бесплатно</p></div>
-      <div class="profit-cards-container__card">
+        <p class="profit-card__description">Комиссия сервиса за&nbsp;продажу вещи не превышает 5%. Размещение лота –– абсолютно бесплатно</p>
+      </article>
+      <article class="profit-cards-container__card">
         <div class="profit-card__header-icon-container">
           <h4 class="profit-card__content__header">Страхование&NewLine;заказа</h4>
           <div class="profit-card__content__icon">
@@ -70,7 +71,7 @@
           </div>
         </div>
         <p class="profit-card__description">Выплатим 100% компенсацию, если посылку повредят или&nbsp;потеряют</p>
-      </div>
+      </article>
     </section>
 
     <!-- Screen 3 -->
@@ -78,7 +79,7 @@
       <div class="caption-chip">Преимущества</div>
       <h2 class="page-header">Покупайте оригинальные&NewLine;брендовые вещи</h2>
       <div class="profits-customer-grid">
-        <div class="profits-customer-grid__card customer-profit_safe-deal">
+        <article class="profits-customer-grid__card customer-profit_safe-deal">
           <div class="profit-customer-card__header-description-container">
             <h4 class="profit-customer-card__header">Безопасная сделка</h4>
             <p class="profit-customer-card__description">Берем на&nbsp;себя ответственность за&nbsp;безопасность вашей сделки&nbsp;–– оплата произойдёт только после получения заказа</p>
@@ -86,22 +87,22 @@
           <div class="profit-customer-card__image-container">
             <img class="safe-deal__cube" src="public/pictures/black_cube.png"/>
           </div>
-        </div>
-        <div class="profits-customer-grid__card customer-profit_real-reviews">
+        </article>
+        <article class="profits-customer-grid__card customer-profit_real-reviews">
           <div class="profit-card__header-icon-container">
             <h4 class="profit-customer-card__header">Отзывы от&nbsp;реальных&NewLine;покупателей</h4>
             <div class="profit-card__content__icon"><img src="public/icons/thumbs-up-icon.jpg" /></div>
           </div>
           <p class="profit-card__description">Мы ценим ваше доверие, поэтому анализируем отзывы пользователей, чтобы&nbsp;избежать «накрутки»</p>
-        </div>
-        <div class="profits-customer-grid__card customer-profit_original-check">
+        </article>
+        <article class="profits-customer-grid__card customer-profit_original-check">
           <div class="profit-card__header-icon-container">
             <h4 class="profit-customer-card__header">Проверка&NewLine;подлинности вещей</h4>
             <div class="profit-card__content__icon"><img src="public/icons/discover-icon.jpg" /></div>
           </div>
           <p class="profit-card__description">Перед публикацией наши  модераторы и&nbsp;эксперты внимательно проверяют каждую&nbsp;вещь по&nbsp;фотографиям изделия</p>
-        </div>
-        <div class="profits-customer-grid__card customer-profit_cdek-delivery">
+        </article>
+        <article class="profits-customer-grid__card customer-profit_cdek-delivery">
           <div class="profit-customer-card__header-description-container">
             <h4 class="profit-customer-card__header">Доставка СДЭК</h4>
             <p class="profit-card__description">Доставим заказ в&nbsp;45&nbsp;000+ населённых пунктов</p>
@@ -109,8 +110,8 @@
           <div class="profit-customer-card__image-container">
             <img class="cdek__cube" src="public/pictures/black_cube.png"/>
           </div>
-        </div>
-        <div class="profits-customer-grid__card customer-profit_online-support">
+        </article>
+        <article class="profits-customer-grid__card customer-profit_online-support">
           <div>
             <h4 class="profit-customer-card__header">Онлайн поддержка 24/7</h4>
             <p class="profit-card__description">Ответим на&nbsp;все интересующие вас вопросы на&nbsp;любом этапе заказа</p>
@@ -133,7 +134,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -151,7 +152,7 @@
       </div>
       <h2 class="page-header">Как работает Looton</h2>
       <div class="instructions-grid sellers">
-        <div class="instructions-grid__card">
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Подготовьте вещь к&nbsp;продаже</h4>
             <h3 class="instructions-grid__card__id">01</h3>
@@ -160,76 +161,76 @@
             в&nbsp;химчистку при&nbsp;необходимости.
             Сфотографируйте вещь 
             на&nbsp;нейтральном фоне, следуя подсказкам в&nbsp;приложении.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Разместите объявление</h4>
             <h3 class="instructions-grid__card__id">02</h3>
           </div>
           <p class="instructions-grid__card__description">Напишите размер и&nbsp;материал вещи, её&nbsp;состояние и&nbsp;дефекты. Укажите иную информацию, которая будет полезна покупателю.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Дождитесь проверки объявления</h4>
             <h3 class="instructions-grid__card__id">03</h3>
           </div>
           <p class="instructions-grid__card__description">В&nbsp;среднем это&nbsp;занимает примерно 2&nbsp;часа. 
             Если объявление прошло проверку, оно появится на&nbsp;главной странице сервиса.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Дождитесь оформления заказа</h4>
             <h3 class="instructions-grid__card__id">04</h3>
           </div>
           <p class="instructions-grid__card__description">Упакуйте и&nbsp;отправьте вещь 
             в&nbsp;любом пункте СДЭК.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Получите выплату</h4>
             <h3 class="instructions-grid__card__id">05</h3>
           </div>
           <p class="instructions-grid__card__description">Банк зарезрвирует деньги за&nbsp;покупку, а&nbsp;мы отправим их, когда покупатель получит товар и&nbsp;убедится, что он соответствует описанию.</p>
-        </div>
+        </article>
       </div>
 
       <div class="instructions-grid customers instructions-grid__hidden">
-        <div class="instructions-grid__card">
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Создание объявления</h4>
             <h3 class="instructions-grid__card__id">01</h3>
           </div>
           <p class="instructions-grid__card__description">В&nbsp;описании товара указываются размер и&nbsp;материал вещи, её состояние и&nbsp;дефекты, а&nbsp;так же город, из&nbsp;которого будет отправлен заказ.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Модерация</h4>
             <h3 class="instructions-grid__card__id">02</h3>
           </div>
           <p class="instructions-grid__card__description">Наши модераторы и&nbsp;эксперты проверяют объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Публикация на&nbsp;главной странице</h4>
             <h3 class="instructions-grid__card__id">03</h3>
           </div>
           <p class="instructions-grid__card__description">Если эксперты сделали вывод об&nbsp;оригинальности товара и&nbsp;соответствии описанию.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Оформление заказа</h4>
             <h3 class="instructions-grid__card__id">04</h3>
           </div>
           <p class="instructions-grid__card__description">Выберите удобный пункт самовывоза в&nbsp;приложении 
             и укажите данные получателя.</p>
-        </div>
-        <div class="instructions-grid__card">
+        </article>
+        <article class="instructions-grid__card">
           <div class="instructions-grid__card__header-id-container">
             <h4 class="instructions-grid__card__header">Получение товара</h4>
             <h3 class="instructions-grid__card__id">05</h3>
           </div>
           <p class="instructions-grid__card__description">Убедитесь, что товар соответствует описанию. После&nbsp;вашего подтверждения деньги за&nbsp;заказ перечислятся на&nbsp;счёт продавца.</p>
-        </div>
+        </article>
       </div>
     </section>
 

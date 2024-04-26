@@ -8,24 +8,6 @@
 export function toggleCustomerSeller(sellersChipId, customersChipId, 
   sellersContentClassName, customersContentClassName, 
   classChecked, classHidden) {
-  // const sellersInstructionsChip = document.getElementById("instructions__sellers")
-  // const customersInstructionsChip = document.getElementById("instructions__customers")
-  // const sellersInstructions = document.getElementsByClassName("instructions-grid sellers")?.[0]
-  // const customersInstructions = document.getElementsByClassName("instructions-grid customers")?.[0]
-
-  // sellersInstructionsChip.addEventListener('click', function () {
-  //   customersInstructionsChip.classList.remove("customer-seller-toggle__checked");
-  //   sellersInstructionsChip.classList.add("customer-seller-toggle__checked");
-  //   sellersInstructions.classList.remove("instructions-grid__hidden")
-  //   customersInstructions.classList.add("instructions-grid__hidden")
-  // })
-
-  // customersInstructionsChip.addEventListener('click', function () {
-  //   sellersInstructionsChip.classList.remove("customer-seller-toggle__checked");
-  //   customersInstructionsChip.classList.add("customer-seller-toggle__checked");
-  //   customersInstructions.classList.remove("instructions-grid__hidden")
-  //   sellersInstructions.classList.add("instructions-grid__hidden")
-  // })
 
   const sellersInstructionsChip = document.getElementById(sellersChipId)
   const customersInstructionsChip = document.getElementById(customersChipId)
