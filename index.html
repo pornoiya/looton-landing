@@ -537,45 +537,5 @@
     </section>
 
     <script type="module" src="/main.js"></script>
-    <script>
-        const sellersInstructionsChip = document.getElementById("instructions__sellers")
-        const customersInstructionsChip = document.getElementById("instructions__customers")
-        const sellersInstructions = document.getElementsByClassName("instructions-grid sellers")?.[0]
-        const customersInstructions = document.getElementsByClassName("instructions-grid customers")?.[0]
-
-        sellersInstructionsChip.addEventListener('click', function () {
-          customersInstructionsChip.classList.remove("customer-seller-toggle__checked");
-          sellersInstructionsChip.classList.add("customer-seller-toggle__checked");
-          sellersInstructions.classList.remove("instructions-grid__hidden")
-          customersInstructions.classList.add("instructions-grid__hidden")
-        })
-
-        customersInstructionsChip.addEventListener('click', function () {
-          sellersInstructionsChip.classList.remove("customer-seller-toggle__checked");
-          customersInstructionsChip.classList.add("customer-seller-toggle__checked");
-          customersInstructions.classList.remove("instructions-grid__hidden")
-          sellersInstructions.classList.add("instructions-grid__hidden")
-        })
-
-
-        const sellersFAQChip = document.getElementById("chip-faq__sellers")
-        const customersFAQChip = document.getElementById("chip-faq__customers")
-        const sellersFAQ = document.getElementsByClassName("faq__sellers")?.[0]
-        const customersFAQ = document.getElementsByClassName("faq__customers")?.[0]
-
-        sellersFAQChip.addEventListener('click', function () {
-          customersFAQChip.classList.remove("customer-seller-toggle__checked");
-          sellersFAQChip.classList.add("customer-seller-toggle__checked");
-          sellersFAQ.classList.remove("hidden")
-          customersFAQ.classList.add("hidden")
-        })
-
-        customersFAQChip.addEventListener('click', function () {
-          sellersFAQChip.classList.remove("customer-seller-toggle__checked");
-          customersFAQChip.classList.add("customer-seller-toggle__checked");
-          customersFAQ.classList.remove("hidden")
-          sellersFAQ.classList.add("hidden")
-        })
-    </script>
   </body>
 </html>

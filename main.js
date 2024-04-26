@@ -1,26 +1,13 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { toggleCustomerSeller } from './counter.js'
+import { toggleCustomerSeller } from './content-toggle'
 
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `
+toggleCustomerSeller("instructions__sellers", "instructions__customers",
+"instructions-grid sellers", "instructions-grid customers",
+"customer-seller-toggle__checked", "instructions-grid__hidden"
+);
 
-// setupCounter(document.querySelector('#counter'))
 
-toggleCustomerSeller();
+toggleCustomerSeller("chip-faq__sellers", "chip-faq__customers",
+"faq__sellers", "faq__customers",
+"customer-seller-toggle__checked", "hidden"
+);
