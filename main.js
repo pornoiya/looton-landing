@@ -3,7 +3,7 @@ import { toggleCustomerSeller } from './content-toggle'
 
 toggleCustomerSeller("instructions__sellers", "instructions__customers",
 "instructions-grid sellers", "instructions-grid customers",
-"customer-seller-toggle__checked", "instructions-grid__hidden"
+"customer-seller-toggle__checked", "hidden"
 );
 
 

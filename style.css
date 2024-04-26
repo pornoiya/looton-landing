@@ -6,7 +6,6 @@
   --looton-white: #FFF;
   --looton-bgr-grey: #F8F8F8;
   --looton-green: #40F988;
-  --looton-light-grey: #E2E2E2;
 }
 
 html {
@@ -22,8 +21,9 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-h1 {
+.text_large {
   font-size: 6rem;
+  margin-bottom: 4rem;
 }
 
 button {
@@ -109,11 +109,10 @@ button {
   gap: 6.5rem;
 }
 
-.page-header__gradient__large {
+.text-bold_grey-gradient {
   background: -webkit-linear-gradient(0.50turn, #E2E2E2, #BCBCBC, #E8E8E8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 4rem;
 
   font-weight: 600;
   line-height: 110%;
@@ -127,8 +126,8 @@ button {
   white-space: pre;
 }
 
-.page-description_grey {
-  color: var(--looton-light-grey);
+.text_grey {
+  color: #E2E2E2;
 }
 
 .page__cta-button {
@@ -225,6 +224,7 @@ button {
   min-width: 108rem;
   gap: 15px;
   justify-content: stretch;
+  margin-top: 2rem;
 }
 
 .profit-cards-container__card {
@@ -283,6 +283,7 @@ button {
   max-height: 76rem;
   gap: 1.5rem;
   justify-content: stretch;
+  margin-top: 2rem;
 }
 
 .profits-customer-grid__card {
@@ -498,6 +499,7 @@ button {
   gap: 1.5rem;
   grid-template-rows: repeat(2, 38rem);
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
 }
 
 .instructions-grid__card {
@@ -524,11 +526,13 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+}
+.instructions-grid__card__header-id-container .card-title {
+  max-width: 60%;
 }
 
-/* To-Do: rename to .card-title  */
-.instructions-grid__card__header, .card-title {
-  width: 60%;
+.card-title {
   font-size: 2.7rem;
   font-style: normal;
   font-weight: 500;
@@ -544,18 +548,13 @@ button {
   letter-spacing: -0.11rem;
 }
 
-/* To-Do: replace */
-.instructions-grid__card__description, .card-description {
-  font-size: 2rem;
+.card-description {
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 24px */
   letter-spacing: -0.044rem;
-}
-
-/* To-Do: replace */
-.instructions-grid__hidden {
-  display: none;
+  width: 97%;
 }
 
 /* Screen brands */
@@ -752,13 +751,8 @@ svg {
   width: 100%;
 }
 
-.page-header__gradient__medium {
+.text_medium {
   font-size: 5rem;
-  word-break: normal;
-  
-  background: -webkit-linear-gradient(0.50turn, #E2E2E2, #BCBCBC, #E8E8E8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-bottom: 4rem;
 
   font-weight: 600;
@@ -948,10 +942,6 @@ svg {
   transform: rotate(45deg);
 }
 
-.hidden {
-  display: none;
-}
-
 /* Footer */
 
 .looton-footer {
@@ -1001,7 +991,7 @@ svg {
 }
 
 .footer-navigation__link:hover {
-  color: black;
+  color: var(--looton-black);
 }
 
 .footer__logo-contacts-container {
@@ -1057,4 +1047,8 @@ svg {
 
 .payment-method-icon-wrapper img {
   height: 100%;
+}
+
+.hidden {
+  display: none;
 }
