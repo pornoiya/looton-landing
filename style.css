@@ -31,7 +31,7 @@ button {
 }
 
 .screen {
-  padding: clamp(14px, 1.5%, 40px) 12vw 0px;
+  padding: clamp(14px, 1.5%, 4rem) 12vw 0px;
 }
 
 .main-screen {
@@ -950,4 +950,111 @@ svg {
 
 .hidden {
   display: none;
+}
+
+/* Footer */
+
+.looton-footer {
+  height: clamp(31rem, 35rem, 40rem);
+
+  background-image: url("public/pictures/white-cube-upturned.png"), 
+  url("public/pictures/white-cube.png"), 
+  url("public/pictures/white-cube-upturned.png"), linear-gradient(180deg, #40F988 40%, #23F7D1 100%);;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-blend-mode: darken;
+  background-position: top left, bottom right, right 40% top, center center;
+  background-size: auto 60rem, auto 30rem, auto 31rem;
+
+  overflow: hidden;
+  border-radius: 3rem 3rem 0 0;
+}
+
+.looton-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 6rem 12vw;
+}
+
+.footer__logo-nav-container, 
+.footer__info-payment-methods-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-navigation {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer-navigation__link {
+  color: #3f3e3e;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 100%; /* 18px */
+  letter-spacing: -0.0198rem;
+
+  text-decoration: none;
+}
+
+.footer-navigation__link:hover {
+  color: black;
+}
+
+.footer__logo-contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer-contacts {
+  color: #3f3e3e;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 100%; /* 26px */
+  letter-spacing: -0.0286rem;
+}
+
+.tiny-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  letter-spacing: -0.0154rem;
+}
+
+.web-development-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: #3f3e3e;
+}
+
+.web-development-link > img {
+  height: 1rem;
+  width: 1rem;
+}
+
+.copyright-web-development-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-methods-container {
+  display: flex;
+  gap: 1.3rem
+}
+
+.payment-method-icon-wrapper {
+  height: 2rem;
+}
+
+.payment-method-icon-wrapper img {
+  height: 100%;
 }
