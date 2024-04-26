@@ -16,11 +16,6 @@ html {
 body {
   margin: 0;
   background-color: var(--looton-bgr-grey);
-  /* display: flex;
-  flex-direction: column; */
-  /* place-items: center; */
-  /* min-width: 320px;
-  min-height: 100vh; */
 }
 
 h1, h2, h3, h4, h5 {
@@ -37,7 +32,6 @@ button {
 
 .screen {
   padding: clamp(14px, 1.5%, 40px) 12vw 0px;
-  /* width: 78vw; */
 }
 
 .main-screen {
@@ -45,7 +39,6 @@ button {
   background-color: var(--looton-black);
   border-radius: 0 0 30px 30px;
   overflow: hidden;
-  /* z-index: 1; */
 }
 
 .header {
@@ -80,7 +73,7 @@ button {
 
   color: #A1A5AB;
 
-  letter-spacing: -0.352px;
+  letter-spacing: -0.0352rem;
   font-size: 1.6rem;
   font-weight: 500;
   text-decoration: none;
@@ -94,10 +87,9 @@ button {
   background-color: var(--looton-white);
 }
 
-.page-navigation__cta-button {
+.button_medium {
   padding: 1rem 2.5rem;
-  background-color: var(--looton-white);
-  border-radius: 40px;
+  border-radius: 4rem;
   font-size: 1.8rem;
   border: 1px solid transparent;
   display: flex;
@@ -143,44 +135,34 @@ button {
   width: auto;
   display: flex;
   align-items: center;
+
+  border-radius: 4rem;
+  border: 1px solid transparent;
+}
+
+.button_large {
   height: 7rem;
   padding: 1.8rem 4.8rem;
-  flex-shrink: 0;
-  border-radius: 40px;
-  border: 1px solid transparent;
   font-size: 3rem;
   gap: 2.5rem
 }
 
-.page__cta-button:hover, .page-navigation__cta-button:hover {
+.page__cta-button:hover {
   transition: padding .3s;
   transform: scale(1.03);
 }
 
-.page__cta-button:hover .arrow, .page-navigation__cta-button:hover .arrow {
+.page__cta-button:hover .arrow {
   transform: rotate(45deg);
   transition: transform .2s ease-in-out;
 }
 
-.page__cta-button .arrow {
+.button_large .arrow {
   width: 2rem;
 }
 
 .page__cta-button_gradient {
   background: linear-gradient(90deg, var(--looton-green) 58.5%, #23F7D1 100%), linear-gradient(90deg, var(--looton-green) 0%, #51D6A8 100%);
-}
-
-.looton-screen__enlighter {
-  position: absolute;
-  z-index: 0;
-
-  width: 28vw;
-  right: 10rem;
-  height: 68vh;
-  flex-shrink: 0;
-  border-radius: 558px;
-  background: rgba(143, 139, 139, 0.30);
-  filter: blur(100px);
 }
 
 .looton-screen-wrapper img {
@@ -247,9 +229,8 @@ button {
 
 .profit-cards-container__card {
   font-size: 2rem;
-  min-height: 200px;
-  /* height: 19rem; */
-  border-radius: 20px;
+  min-height: 20rem;
+  border-radius: 2rem;
   background: var(--looton-white);
   padding: 3rem;
   display: flex;
