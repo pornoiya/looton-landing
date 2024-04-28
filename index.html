@@ -15,15 +15,14 @@
         </div>
         <div class="header__right-part-container">
           <div class="nav-wrapper">
-            <!-- To-Do: add refs -->
             <nav class="page-navigation">
-              <a class="page-navigation__item" href="">О&nbsp;нас</a>
-              <a class="page-navigation__item" href="">Преимущества</a> 
-              <a class="page-navigation__item" href="">FAQ</a> 
-              <a class="page-navigation__item" href="">Контакты</a> 
+              <a class="page-navigation__item" href="#nav-element_about-us">О&nbsp;нас</a>
+              <a class="page-navigation__item" href="#nav-element_profits">Преимущества</a> 
+              <a class="page-navigation__item" href="#nav-element_faq">FAQ</a> 
+              <a class="page-navigation__item" href="#nav-element_contacts">Контакты</a> 
             </nav>
           </div>
-          <button id="cta-button-navigation" class="page__cta-button button_medium button_white">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
+          <a href="#launch-form" id="cta-button-navigation" class="a-tag_cta page__cta-button button_medium button_white">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></a>
         </div>
       </div>
 
@@ -33,7 +32,9 @@
             <h1 class="text_large text-bold_grey-gradient">Looton — сервис&NewLine;для&nbsp;покупки новых&NewLine;вещей и&nbsp;ресейла</h1>
             <h3 class="page-description text_grey">Продавайте одежду и аксессуары с комиссией до 5%,&NewLine;покупайте оригинальные вещи быстро и безопасно</h3>  
           </div>
-         <button class="page__cta-button page__cta-button_gradient button_large">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
+          <div class="main-screen__cta-button-container">
+            <a href="#launch-form" class="a-tag_cta page__cta-button page__cta-button_gradient button_large">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></a>
+          </div>
         </div>
         <div class="application-screen-container">
           <img class="application-screen" src="public/pictures/screen-1.png" alt="looton application main screen" />
@@ -42,7 +43,7 @@
     </section>
 
     <!-- Screen 2 -->
-    <section class="screen profits-screen">
+    <section class="screen profits-screen" id="nav-element_profits">
       <div class="caption-chip">Преимущества</div>
       <h2 class="page-header">Продавайте&NewLine;выгодно и&nbsp;безопасно</h2>
       <div class="profit-cards-container">
@@ -140,7 +141,7 @@
     </section>
 
     <!-- Screen 4 -->
-    <section class="screen instructions-screen">
+    <section class="screen instructions-screen" id="nav-element_about-us">
       <div class="customer-seller-toggle-container">
         <button class="chip-customer-seller-toggle chip-customer-seller-toggle__checked" id="chip-instructions__sellers" onclick="">
           Для продавцов 
@@ -243,7 +244,7 @@
       <div class="ticker-container">
         <div class="ticker-wrapper">
           <div class="ticker__items marquee">
-            <div class="item">
+            <div class="ticker__item">
               <img src="public/pictures/brands/burberry-logo.png">
             </div>
             <div class="ticker__item">
@@ -384,9 +385,8 @@
         <div class="caption-chip_white">Скачайте приложение</div>
         <h2 class="text-bold_grey-gradient text_medium">Покупайте и&nbsp;продавайте оригинальные брендовые вещи в&nbsp;приложении</h2>
         <div class="download-screen__buttons-container">
-          <!-- To-do: buttons-actions -->
-          <button class="page__cta-button button_white button_large">для iOS<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></button>
-          <button class="page__cta-button button_white button_large">для Android<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></button>
+          <a href="#launch-form" class="a-tag_cta page__cta-button button_white button_large">для iOS<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
+          <a href="#launch-form" class="a-tag_cta page__cta-button button_white button_large">для Android<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
         </div>
       </div>
       <div class="application-screen-container">
@@ -394,7 +394,7 @@
       </div>
     </section>
 
-    <section class="screen screen-launch-form">
+    <section class="screen screen-launch-form" id="launch-form">
       <div class="screen-launch-form__container">
         <div class="screen-launch-form__container__left">
           <h2 class="page-header">Узнайте о&nbsp;запуске&NewLine;Looton первым</h2>
@@ -420,7 +420,7 @@
     </section>
 
     <!-- Screen FAQ -->
-    <section class="screen screen-faq">
+    <section class="screen screen-faq" id="nav-element_faq">
       <div class="customer-seller-toggle-container">
         <button class="chip-customer-seller-toggle chip-customer-seller-toggle__checked" id="chip-faq__sellers">
           Для продавцов 
@@ -537,7 +537,7 @@
       </div>
     </section>
 
-    <footer class="looton-footer">
+    <footer class="looton-footer" id="nav-element_contacts">
       <div class="footer__logo-nav-container">
         <div class="footer__logo-contacts-container">
           <div class="looton-logo">
@@ -553,15 +553,17 @@
           <h2 class="footer-contacts">info@email.com</h2>
         </div>
         <nav class="footer-navigation">
-          <a class="footer-navigation__link" href="">О&nbsp;нас</a>
-          <a class="footer-navigation__link" href="">Преимущества</a> 
-          <a class="footer-navigation__link" href="">FAQ</a> 
-          <a class="footer-navigation__link" href="">Контакты</a> 
+          <a class="footer-navigation__link" href="#nav-element_about-us">О&nbsp;нас</a>
+          <a class="footer-navigation__link" href="#nav-element_profits">Преимущества</a> 
+          <a class="footer-navigation__link" href="#nav-element_faq">FAQ</a> 
+          <a class="footer-navigation__link" href="#nav-element_contacts">Контакты</a> 
         </nav>
       </div>
+      
       <div class="footer__info-payment-methods-container">
         <div class="copyright-web-development-container">
           <p class="tiny-text">2024 © Looton</p>
+          <!--  To-do: add link to telegram -->
           <a class="tiny-text web-development-link" href="">Разработка сайта<img src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
         </div>
         <div class="payment-methods-container">
