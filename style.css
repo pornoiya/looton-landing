@@ -22,14 +22,14 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .text_large {
   white-space: pre;
   font-size: 6rem;
-  margin-bottom: 4rem;
-}
-
-button {
-  cursor: pointer;
+  margin-bottom: 0.6em;
 }
 
 .screen {
@@ -60,7 +60,7 @@ button {
 
 .main-screen__cta-button-container {
   width: fit-content;
-  height: 7rem;
+  /* height: 7rem; */
 }
 
 .header {
@@ -113,12 +113,12 @@ button {
 }
 
 .button_medium {
-  padding: 1rem 2.5rem;
   border-radius: 4rem;
   font-size: 1.8rem;
+  padding: .55em 1.38em;
   border: 1px solid transparent;
   display: flex;
-  gap: 1.5rem
+  gap: 0.83em
 }
 
 .main-screen__content {
@@ -156,7 +156,6 @@ button {
 
   font-weight: 600;
   line-height: 110%;
-  letter-spacing: -0.15rem;
 }
 
 .page-description {
@@ -181,10 +180,10 @@ button {
 }
 
 .button_large {
-  height: 7rem;
-  padding: 1.8rem 4.8rem;
+  /* height: 7rem; */
   font-size: 3rem;
-  gap: 2.5rem;
+  padding: .6em 1.6em;
+  gap: .83em;
   line-height: 100%;
 }
 
@@ -198,8 +197,8 @@ button {
   transition: transform .2s ease-in-out;
 }
 
-.button_large .arrow {
-  width: 2rem;
+.button_large .arrow, .button_medium .arrow {
+  width: .66em;
 }
 
 .page__cta-button_gradient {
@@ -233,28 +232,28 @@ button {
 }
 
 .caption-chip, .caption-chip_with-arrow, .caption-chip_white {
-  border-radius: 2.5rem;
-  border: 2px solid var(--looton-black);
-  padding: 0.5rem 1.5rem;
-  text-align: center;
   font-size: 1.4rem;
+  border-radius: 1.78em;
+  border: 2px solid var(--looton-black);
+  padding: .35em 1.07em;
+  text-align: center;
   font-style: normal;
   font-weight: 400;
   line-height: 110%; /* 17.6px */
 
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.78em;
 }
 
 .caption-chip_with-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .71em;
 }
 
 .caption-chip_with-arrow .arrow {
-  height: 1rem;
-  width: 1rem;
+  height: .71em;
+  width: .71em;
 }
 
 .caption-chip_white {
@@ -265,7 +264,6 @@ button {
 .profit-cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* min-width: 108rem; */
   max-width: 120rem;
   gap: 1.5rem;
   justify-content: stretch;
