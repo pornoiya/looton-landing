@@ -88,18 +88,16 @@ button {
 
 .page-navigation {
   display: flex;
+  font-size: 1.6rem;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1.875em;
 }
 
 .page-navigation__item {
   cursor: pointer;
-
-  color: #A1A5AB;
-
   letter-spacing: -0.0352rem;
-  font-size: 1.6rem;
   font-weight: 500;
+  color: #A1A5AB;
   text-decoration: none;
 }
 
@@ -264,25 +262,36 @@ button {
 .profit-cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  font-size: 1rem;
   max-width: 120rem;
-  gap: 1.5rem;
+  gap: 1.5em;
   justify-content: stretch;
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 .profit-cards-container__card {
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  background: var(--looton-white);
+  border-radius: 2em;
+  padding: 2.5em;
+  height: 20em;
+  
+  /* font-size: 2rem;
   min-height: 20rem;
   border-radius: 2rem;
   background: var(--looton-white);
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
-.profit-cards-container__card:hover, .profits-customer-grid__card:hover, .instructions-grid__card:hover  {
-  filter: drop-shadow(0 0.4rem 1rem #F0EFEF);
+.profit-cards-container__card:hover, 
+.profits-customer-grid__card:hover, 
+.instructions-grid__card:hover  {
+  filter: drop-shadow(0 4px 10px #F0EFEF);
 }
 
 .profit-card__header-icon-container {
@@ -291,16 +300,18 @@ button {
 }
 
 .profit-card__content__header {
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
+  font-size: 2.4em;
   font-weight: 500;
   line-height: 110%;
-  letter-spacing: -0.05rem;
+  /* letter-spacing: -0.005em; */
   white-space: pre;
 }
 
 .profit-card__content__icon {
-  min-width: 5rem;
-  height: 5rem;
+  /* display: flex; */
+  width: 5em;
+  height: 5em;
 }
 
 .profit-card__content__icon img {
@@ -308,47 +319,48 @@ button {
   height: 100%;
 }
 
-.profit-card__description, .profit-customer-card__description {
-  font-size: 1.8rem;
+.profit-card__description {
+  font-size: 18em;
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.003em;
   max-width: 97%;
 }
 
 /* Screen 3 */
 
 .profits-customer-grid {
+  font-size: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 24rem);
+  grid-template-rows: repeat(3, 24em);
   max-height: 76rem;
-  gap: 1.5rem;
+  gap: 1.5em;
   justify-content: stretch;
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 .profits-customer-grid__card {
-  border-radius: 20px;
-  background-color: #000;
+  border-radius: 2em;
+  background-color: var(--looton-black);
   overflow: hidden;
 }
 
 .profit-customer-card__header {
-  font-size: 3rem;
+  font-size: 3em;
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -0.057rem;
-  margin-bottom: 2.5rem;
+  letter-spacing: -0.057em;
+  margin-bottom: 2.5em;
   white-space: pre;
 }
 
 .profit-customer-card__header-description-container {
-  padding: 3rem;
-  position: relative;
-  z-index: 1;
+  padding: 2.5em;
+  /* position: relative;
+  z-index: 1; */
 }
 
 .customer-profit_safe-deal, .customer-profit_cdek-delivery, .customer-profit_online-support {
@@ -357,8 +369,8 @@ button {
 }
 
 .profit-customer-card__image-container {
-  width: 100%;
-  max-width: 28rem;
+  /* width: 100%; */
+  max-width: 28em;
 
   height: 100%;
   object-fit: contain;
@@ -374,14 +386,14 @@ button {
 
 .safe-deal__cube {
   transform: rotate(-22deg);
-  margin-left: -3rem;
+  margin-left: -3em;
 }
 
 .cdek__cube {
   /* width: 70%; */
   transform: rotate(30deg) scale(0.7);
-  margin-left: 3rem;
-  margin-top: -1rem;
+  margin-left: 3em;
+  margin-top: -1em;
 }
 
 .customer-profit_real-reviews, .customer-profit_original-check {
@@ -392,7 +404,7 @@ button {
 
 .customer-profit_safe-deal {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
@@ -576,11 +588,12 @@ button {
 }
 
 .card-title {
-  font-size: 2.7rem;
+  font-size: 2.7em;
   font-style: normal;
   font-weight: 500;
   line-height: 100%; /* 30px */
-  letter-spacing: -0.057rem;
+  letter-spacing: -0.057em;
+  white-space: pre;
 }
 
 .instructions-grid__card__id {
