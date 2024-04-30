@@ -64,13 +64,14 @@ button {
 }
 
 .header {
-  width: 100%;
+  /* width: 100%; */
+  width: min(110rem, 80vw);
   height: clamp(45px, .8vh, 10rem);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 47rem;
+  /* gap: 45rem; */
 }
 
 .header__right-part-container {
@@ -80,15 +81,19 @@ button {
 }
 
 .nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
   width: auto;
-  padding: 1rem 3.5rem;
+  padding: .54em 2.1em;
+  /* padding: 0.56em 2.1em; */
   border-radius: 50px;
   border: 2px solid var(--looton-green);
 }
 
 .page-navigation {
   display: flex;
-  font-size: 1.6rem;
   flex-direction: row;
   gap: 1.875em;
 }
@@ -99,6 +104,7 @@ button {
   font-weight: 500;
   color: #A1A5AB;
   text-decoration: none;
+  
 }
 
 .page-navigation__item:hover {
@@ -121,9 +127,10 @@ button {
 
 .main-screen__content {
   height: 50rem;
+  width: min(110rem, 80vw);
   display: flex;
-  justify-content: start;
-  gap: 20rem;
+  justify-content: space-between;
+  /* gap: 135px; */
   margin-top: clamp(10rem, 14vh, 20vh);
 }
 
@@ -239,6 +246,7 @@ button {
   font-weight: 400;
   line-height: 110%; /* 17.6px */
 
+  width: fit-content;
   margin-bottom: 1.78em;
 }
 
@@ -583,9 +591,6 @@ button {
   width: 100%;
   font-size: 1rem;
 }
-.instructions-grid__card__header-id-container .card-title {
-  max-width: 60%;
-}
 
 .card-title {
   font-size: 2.7em;
@@ -593,7 +598,15 @@ button {
   font-weight: 500;
   line-height: 100%; /* 30px */
   letter-spacing: -0.057em;
+  /* white-space: pre; */
+}
+
+.instructions-grid__card__header-id-container .card-title, 
+.profits-customer-grid__card .card-title {
+  max-width: 60%;
+  word-break: normal;
   white-space: pre;
+  word-wrap: break-word
 }
 
 .instructions-grid__card__id {
@@ -805,11 +818,12 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  gap: 10em;
+  /* gap: 10em; */
 }
 
 .application-screen-container, .application-screen-container_medium {
-  width: 380px;
+  /* width: 390px; */
+  width: clamp(260px, 42%, 390px);
   background-color: var(--looton-black);
   border-radius: 50rem;
   /* height: 80%; */
@@ -973,9 +987,10 @@ svg {
 }
 
 .faq-question-answer__icon-wrap {
+  display: flex;
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
+  width: 3em;
+  height: 3em;
 }
 
 .faq-question-answer__icon-wrap img {
@@ -1145,4 +1160,62 @@ svg {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 1399px) {
+  .screen-launch-form__container__left {
+    padding: 6rem 0 6rem calc((128rem - 80vw)/2);
+  }
+
+  .application-screen-container, .application-screen-container_medium {
+    width: clamp(280px, 34%, 380px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text_large {
+    font-size: 5.2rem;
+  }
+
+  .text_medium, .page-header {
+    font-size: 4.5rem;
+  }
+
+  .page-description {
+    font-size: 2rem;
+  }
+
+  .button_large, .card-title {
+    font-size: 2.4rem;
+  }
+
+  .button_medium, .page-navigation__item,
+  .nav-wrapper {
+    font-size: 1.4rem;
+  }
+
+  .profits-customer-grid, .instructions-grid, .profit-cards-container {
+    font-size: .8rem;
+  }
+
+  .card-description {
+    font-size: 1.6rem;
+  }
+
+  .application-screen-container, .application-screen-container_medium {
+    width: clamp(240px, 32%, 340px);
+  }
+
+  .main-screen {
+    height: 750px;
+  }
+
+  .screen-launch-form__container__left {
+    padding: 6rem 0 6rem 10vw;
+    /* норм работает для меньше 1200 */
+    /* padding: 6rem 0 6rem calc((100vw - min(120rem, 80vw))/2); */
+  
+    align-items: center;
+    justify-content: center;
+  }
 }
