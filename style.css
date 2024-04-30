@@ -41,7 +41,7 @@ button {
 .screen-content-wrapper_centred, .screen-content-wrapper_left {
   display: flex;
   flex-direction: column;
-  width: min(120rem, 100vw);
+  width: min(110rem, 80vw);
   justify-content: center;
   align-items: center;
 }
@@ -803,23 +803,23 @@ svg {
   height: 45rem;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   width: 100%;
-  gap: 30rem;
+  gap: 10em;
 }
 
 .application-screen-container, .application-screen-container_medium {
-  width: 35%;
+  width: 380px;
   background-color: var(--looton-black);
   border-radius: 50rem;
-  height: 80%;
+  /* height: 80%; */
   box-shadow:
   0 0 50px 5px #313030,  /* inner white */
   0 0 100px 5px #272727
 }
 
 .application-screen-container_medium {
-  width: 20%;
+  width: 260px;
 }
 
 .application-screen-container .application-screen, 
@@ -885,7 +885,10 @@ svg {
 }
 
 .screen-launch-form__container__left {
-  padding: 6rem 4rem;
+  padding: 9rem;
+  /* норм работает для меньше 1200 */
+  /* padding: 6rem 0 6rem calc((100vw - min(120rem, 80vw))/2); */
+
   align-items: start;
   justify-content: start;
 }
