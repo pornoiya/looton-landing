@@ -361,7 +361,7 @@ button {
   margin-top: 2em;
 }
 
-.profit-card__content__icon {
+.profit-card__content__icon, #download-mobile-button {
   display: none;
 }
 
@@ -1388,9 +1388,14 @@ svg {
     border: 1px solid var(--looton-black);
   }
 
+  .caption-chip_white {
+    border: 1px solid var(--looton-white);
+  }
+
   /* Screen 2 */
   .profits-screen, .instructions-screen {
     padding: 60px 35px 0;
+    overflow-x: hidden;
   }
 
   .page-header {
@@ -1399,8 +1404,10 @@ svg {
   }
 
   .profit-cards-container {
-    /* width: 100%; */
+    width: 100%;
     overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
     /* overflow: hidden; */
     grid-template-columns: repeat(3, 285px);
   }
@@ -1556,5 +1563,49 @@ svg {
 
   .blog-screen__content__header-description-wrapper {
     gap: 15px;
+  }
+
+  /* Screen 7 */
+  .download-screen__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: auto;
+  }
+
+  .text_medium {
+    font-size: 28px;
+  }
+
+  .download-screen {
+    padding-top: 100px;
+  }
+
+  .screen-content__header-description-container {
+    justify-content: center;
+    align-items: center;
+    gap: calc(20px - 17.8px);
+  }
+
+  .download-screen__buttons-container {
+    display: none;
+  }
+
+  #download-mobile-button {
+    display: flex;
+  }
+
+  .screen-content__left-part {
+    gap: 35px;
+  }
+
+  .screen-launch-form__input-label-container {
+    font-size: .625rem;
+  }
+
+  .screen-launch-form__container__left {
+    width: 100%;
+    align-items: center;
   }
 }
