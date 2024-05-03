@@ -664,7 +664,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 13rem;
+  margin-top: 13rem;
 }
 
 .caption-chip__with-arrow {
@@ -737,7 +737,6 @@ button {
 .ticker__item {
   flex: 0 0 auto;
   height: 3rem;
-  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1521,5 +1520,41 @@ svg {
   .instructions-grid__card:nth-child(4),
   .instructions-grid__card:nth-child(5) {
     background-color: var(--looton-white);
+  }
+
+  /* Screen 5 */
+  .brands-screen {
+    margin-top: 40px;
+  }
+
+  .ticker-container {
+    margin-top: calc(35px - 17.8px);
+    margin-bottom: 70px;
+    gap: 30px;
+  }
+
+  .ticker__item {
+    height: 20px;
+  }
+
+  .marquee {
+    animation: run-ticker 20s linear infinite;
+  }
+  
+  .ticker_reverse {
+    animation: run-ticker_reversed 20s linear infinite;
+  }
+
+  /* Screen 6 */
+  .blog-screen {
+    height: 211px;
+  }
+
+  .blog-screen__content {
+    gap: 30px;
+  }
+
+  .blog-screen__content__header-description-wrapper {
+    gap: 15px;
   }
 }
