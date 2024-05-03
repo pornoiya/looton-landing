@@ -1228,7 +1228,7 @@ svg {
   }
 
   .main-screen {
-    height: 750px;
+    height: 700px;
   }
 
   .screen-launch-form__container__left {
@@ -1246,7 +1246,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1085px) {
   .text_large {
     font-size: 4.6rem;
   }
@@ -1258,7 +1258,9 @@ svg {
   .page-description {
     font-size: 1.6rem;
   }
+}
 
+@media screen and (max-width: 1023px) {
   .button_large, .card-title {
     font-size: 2.1rem;
   }
@@ -1278,5 +1280,9 @@ svg {
   .dialog p {
     width: 90%;
     margin-top: 15px;
+  }
+
+  .application-screen-container, .application-screen-container_medium {
+    width: clamp(220px, 35%, 360px);
   }
 }
