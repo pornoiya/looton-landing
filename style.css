@@ -552,9 +552,9 @@ button {
 /* Screen 4 */
 .customer-seller-toggle-container {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   justify-content: left;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5em;
 }
 
 .chip-customer-seller-toggle {
@@ -572,8 +572,8 @@ button {
 }
 
 .chip-customer-seller-toggle .arrow {
-  width: 1rem;
-  height: 1rem;
+  width: 0.71em;
+  height: 0.71em;
 }
 
 .chip-customer-seller-toggle__checked {
@@ -1383,13 +1383,14 @@ svg {
     width: 200px;
   }
 
-  .caption-chip, .caption-chip_with-arrow, .caption-chip_white {
+  .caption-chip, .caption-chip_with-arrow, .caption-chip_white, 
+  .chip-customer-seller-toggle {
     font-size: 10px;
     border: 1px solid var(--looton-black);
   }
 
   /* Screen 2 */
-  .profits-screen {
+  .profits-screen, .instructions-screen {
     padding: 60px 35px 0;
   }
 
@@ -1420,10 +1421,18 @@ svg {
   }
 
   /* Screen 3 */
-  .profits-customer-grid {
+  .instructions-grid, .profits-customer-grid,
+  .instructions-grid__card .card-title {
     font-size: 8px;
-    width: 100%;
+  }
+
+  .instructions-grid, .profits-customer-grid {
+    height: 100%;
     margin-top: 20px;
+  }
+
+  .profits-customer-grid {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1445,7 +1454,8 @@ svg {
     white-space: pre-wrap;
   }
 
-  .customer-profit_online-support .profit-customer-card__header-description-container {
+  .customer-profit_online-support 
+  .profit-customer-card__header-description-container {
     width: 100%;
   }
 
@@ -1468,7 +1478,48 @@ svg {
     height: 30px;
   }
 
-  .customer-profit_online-support .profit-customer-card__header-description-container {
+  .customer-profit_online-support 
+  .profit-customer-card__header-description-container {
     padding: 2.5em;
+  }
+
+  /* Screen 4 */
+  .instructions-grid {
+    gap: 5px;
+    grid-template-rows: repeat(3, 195px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instructions-grid__card {
+    padding: 13px;
+    height: 170px;
+  }
+
+  .instructions-grid__card__id {
+    font-size: 20px;
+  }
+
+  .instructions-grid__card .card-title {
+    font-size: 14px;
+  }
+
+  .instructions-grid__card .card-description {
+    font-size: 8px;
+  }
+
+  .instructions-grid__card__header-id-container {
+    gap: 10px;
+    flex-direction: column-reverse;
+  }
+
+  .instructions-grid__card:nth-child(2),
+  .instructions-grid__card:nth-child(3) {
+    background-color: var(--looton-green);
+  }
+
+  .instructions-grid__card:nth-child(1),
+  .instructions-grid__card:nth-child(4),
+  .instructions-grid__card:nth-child(5) {
+    background-color: var(--looton-white);
   }
 }
