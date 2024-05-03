@@ -1178,7 +1178,7 @@ svg {
   height: 100%;
 }
 
-.hidden {
+.hidden, .header__menu {
   display: none;
 }
 
@@ -1283,6 +1283,86 @@ svg {
   }
 
   .application-screen-container, .application-screen-container_medium {
-    width: clamp(220px, 35%, 360px);
+    width: clamp(200px, 35%, 360px);
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .header__menu {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .screen {
+    padding: 30px 25px;
+  }
+
+  .main-screen {
+    height: 790px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .main-screen .screen-content-wrapper_centred {
+    width: 100%;
+    gap: 117px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .text_large {
+    font-size: 35px;
+    margin: 0;
+  }
+
+  .page-description {
+    font-size: 12px;
+  }
+
+  .button_large {
+    font-size: 18px;
+  }
+
+  .main-screen__content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    flex-direction: column;
+    /* margin-top: 100px; */
+  }
+
+  .nav-wrapper, #cta-button-navigation {
+    display: none;
+  }
+
+  .looton-logo img {
+    width: 70px;
+  }
+
+  .screen-content__left-part {
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .screen-content__header-description-container {
+    text-align: center;
+    gap: 30px;
+  }
+
+  .application-screen-container {
+    width: 200px;
+  }
+
+  .caption-chip, .caption-chip_with-arrow, .caption-chip_white {
+    font-size: 10px;
+    border: 1px solid var(--looton-black);
   }
 }
