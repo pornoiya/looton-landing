@@ -361,10 +361,18 @@ button {
   margin-top: 2em;
 }
 
+.profit-card__content__icon {
+  display: none;
+}
+
 .profits-customer-grid__card {
   border-radius: 2em;
   background-color: var(--looton-black);
   overflow: hidden;
+}
+
+.customer-profit_online-support .profit-customer-card__header-description-container {
+  padding: 0;
 }
 
 .profit-customer-card__header {
@@ -411,7 +419,7 @@ button {
 }
 
 .safe-deal__cube {
-  transform: rotate(-22deg);
+  transform: rotate(-22deg) scale(.7);
   margin-left: -3em;
 }
 
@@ -430,6 +438,7 @@ button {
 
 .customer-profit_safe-deal {
   display: flex;
+  flex-direction: row;
   gap: 1em;
   grid-column-start: 1;
   grid-column-end: 1;
@@ -453,6 +462,7 @@ button {
 
 .customer-profit_cdek-delivery {
   display: flex;
+  flex-direction: row;
   gap: 1rem;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -463,6 +473,7 @@ button {
 .customer-profit_online-support {
   padding: 2.5em;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -1451,8 +1462,13 @@ svg {
   }
 
   .profit-card__content__icon {
+    display: inline-flex;
     width: 30px;
     min-width: 30px;
     height: 30px;
+  }
+
+  .customer-profit_online-support .profit-customer-card__header-description-container {
+    padding: 2.5em;
   }
 }
