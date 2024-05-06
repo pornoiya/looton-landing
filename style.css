@@ -361,7 +361,7 @@ button {
   margin-top: 2em;
 }
 
-.profit-card__content__icon, #download-mobile-button {
+.customer-profit_online-support .profit-card__content__icon, #download-mobile-button {
   display: none;
 }
 
@@ -1605,7 +1605,43 @@ svg {
   }
 
   .screen-launch-form__container__left {
-    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+  }
+
+  .screen-launch-form__container {
+    padding: 40px 25px;
+  }
+
+  .screen-launch-form__input {
+    height: 10px;
+    width: calc(100% - 44px);
+  }
+
+  .launch-form {
+    width: 100%;
+    margin: 35px 0 75px;
+  }
+
+  .screen-launch-form__fields-container > * {
+    width: 100%;
+  }
+
+  .screen-launch-form__fields-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .screen-launch-form__fields-container > .page__cta-button {
+   justify-content: center;
+   gap: 25px;
   }
 }
