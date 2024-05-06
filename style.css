@@ -1017,6 +1017,7 @@ svg {
   display: flex;
   flex-direction: column;
   padding: 2.5em;
+  gap: 20px;
 }
 
 .faq-question-answer:hover {
@@ -1643,5 +1644,15 @@ svg {
   .screen-launch-form__fields-container > .page__cta-button {
    justify-content: center;
    gap: 25px;
+  }
+
+  .faq-question-answer__icon-wrap {
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+  }
+
+  .faq-question-answer {
+    gap: 15px;
   }
 }
