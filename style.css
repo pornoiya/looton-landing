@@ -608,6 +608,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 3em;
 }
 
 .instructions-grid__card:nth-child(even) {
@@ -1087,7 +1088,7 @@ svg {
 /* Footer */
 
 .looton-footer {
-  height: clamp(31rem, 35rem, 40rem);
+  height: 350px;
 
   background-image: url("public/pictures/white-cube-upturned.png"), 
   url("public/pictures/white-cube.png"), 
@@ -1099,6 +1100,7 @@ svg {
 
   overflow: hidden;
   border-radius: 3rem 3rem 0 0;
+  font-size: 10px;
 }
 
 .looton-footer, .footer-content {
@@ -1124,15 +1126,15 @@ svg {
 
 .footer-navigation {
   display: flex;
-  gap: 4rem;
+  gap: 4em;
 }
 
 .footer-navigation__link {
   color: #3f3e3e;
-  font-size: 1.8rem;
+  font-size: 1.8em;
   font-weight: 500;
   line-height: 100%; /* 18px */
-  letter-spacing: -0.0198rem;
+  letter-spacing: -0.0198em;
 
   text-decoration: none;
 }
@@ -1144,22 +1146,22 @@ svg {
 .footer__logo-contacts-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 30px;
 }
 
 .footer-contacts {
   color: #3f3e3e;
-  font-size: 2.6rem;
+  font-size: 2.6em;
   font-weight: 600;
   line-height: 100%; /* 26px */
-  letter-spacing: -0.0286rem;
+  letter-spacing: -0.0286em;
 }
 
 .tiny-text {
-  font-size: 1.4rem;
+  font-size: 1.4em;
   font-weight: 400;
   line-height: 100%; /* 14px */
-  letter-spacing: -0.0154rem;
+  letter-spacing: -0.0154em;
 }
 
 .web-development-link {
@@ -1167,18 +1169,19 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
   color: #3f3e3e;
 }
 
 .web-development-link > img {
-  height: 1rem;
-  width: 1rem;
+  height: 1em;
+  width: 1em;
 }
 
 .copyright-web-development-container {
   display: flex;
-  gap: 3rem;
+  font-size: 10px;
+  gap: 3em;
   justify-content: center;
   align-items: center;
 }
@@ -1189,7 +1192,7 @@ svg {
 }
 
 .payment-method-icon-wrapper {
-  height: 2rem;
+  height: 1.4em;
 }
 
 .payment-method-icon-wrapper img {
@@ -1204,10 +1207,6 @@ svg {
   .screen-launch-form__container__left {
     padding: 7rem 0 7rem calc((128rem - 80vw)/2);
   }
-
-  /* .application-screen-container, .application-screen-container_medium {
-    width: clamp(280px, 34%, 380px);
-  } */
 }
 
 @media screen and (max-width: 1260px) {
@@ -1368,6 +1367,10 @@ svg {
     width: 70px;
   }
 
+  .looton-footer .looton-logo svg {
+    width: 80px;
+  }
+
   .screen-content__left-part {
     align-items: center;
     justify-content: center;
@@ -1397,6 +1400,7 @@ svg {
   .profits-screen, .instructions-screen {
     padding: 60px 35px 0;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .page-header {
@@ -1493,13 +1497,13 @@ svg {
   /* Screen 4 */
   .instructions-grid {
     gap: 5px;
-    grid-template-rows: repeat(3, 195px);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }
 
   .instructions-grid__card {
     padding: 13px;
-    height: 170px;
+    height: 190px;
   }
 
   .instructions-grid__card__id {
@@ -1511,7 +1515,7 @@ svg {
   }
 
   .instructions-grid__card .card-description {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .instructions-grid__card__header-id-container {
@@ -1647,7 +1651,7 @@ svg {
   }
 
   .faq-question-answer__icon-wrap {
-    min-width: 20px;
+    min-width: 20px;  
     max-width: 20px;
     height: 20px;
   }
@@ -1655,4 +1659,51 @@ svg {
   .faq-question-answer {
     gap: 15px;
   }
+
+  .faq-container {
+    margin-bottom: 25px;
+  }
+
+  .footer-content {
+    padding: 45px;
+  }
+
+  .footer-navigation, .copyright-web-development-container {
+    flex-direction: column;
+  }
+
+  .footer__logo-nav-container, .footer__info-payment-methods-container {
+    width: calc(100% - 90px);
+  }
+
+  .looton-footer {
+    font-size: 6.6px;
+  }
+  
+  .tiny-text {
+    font-size: 8px;
+  }
+
+  .copyright-web-development-container {
+    justify-content: start;
+    align-items: start;
+    gap: 10px
+  }
+
+  .footer__info-payment-methods-container {
+    align-items: end;
+  }
+
+  .payment-methods-container {
+    gap: 5px;
+  }
+
+  .looton-footer {
+    background-image: url("public/pictures/white-cube-upturned.png"), 
+    url("public/pictures/white-cube.png"), linear-gradient(180deg, #40F988 40%, #23F7D1 100%);;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: top -300% left, top 20% right, center center;
+    background-size: auto 60em, auto 30em;
+  }
+  
 }
