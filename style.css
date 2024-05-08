@@ -29,7 +29,7 @@ button {
 .text_large {
   white-space: pre;
   font-size: 6rem;
-  margin-bottom: 0.6em;
+  /* margin-bottom: 0.6em; */
 }
 
 .screen {
@@ -130,13 +130,13 @@ button {
   width: min(110rem, 80vw);
   display: flex;
   justify-content: space-between;
-  /* gap: 135px; */
   margin-top: clamp(90px, 14vh, 150px);
 }
 
 .screen-content__header-description-container {
   display: flex;
   flex-direction: column;
+  gap: 60px;
 }
 
 .main-screen__content__left {
@@ -849,6 +849,7 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 150px;
   /* gap: 10em; */
 }
 
@@ -1174,8 +1175,8 @@ svg {
 }
 
 .web-development-link > img {
-  height: 1em;
-  width: 1em;
+  height: .8em;
+  width: .8em;
 }
 
 .copyright-web-development-container {
@@ -1277,7 +1278,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 1023px) {
+/* @media screen and (max-width: 1023px) {
   .button_large, .card-title {
     font-size: 2.1rem;
   }
@@ -1306,26 +1307,174 @@ svg {
   .card-description {
     font-size: 14px;
   }
-}
 
-@media screen and (max-width: 970px) {
   .header__menu {
     display: inline-block;
   }
+} */
+
+@media screen and (min-width: 769px) and (max-width: 1022px) {
+  .button_large, .card-title {
+    font-size: 2.1rem;
+  }
+
+  .looton-logo {
+    width: 20px;
+  }
+
+  .page-description {
+    font-size: 14px;
+  }
+
+  .nav-wrapper, #cta-button-navigation {
+    display: none;
+  }
+
+  .looton-logo img {
+    width: 70px;
+  }
+
+  .text_large {
+    font-size: 38px;
+  }
+
+  .main-screen {
+    height: clamp(600px, 100vh, 790px);
+  }
+
+  .application-screen-container {
+    height: 400px;
+  }
+
+  .main-screen__content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    flex-direction: column;
+  }
+
+  .screen-content__left-part {
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .screen-content__header-description-container {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .caption-chip_white {
+    align-self: center;
+  }
+
+  .main-screen .screen-content-wrapper_centred {
+    width: 100%;
+    gap: 100px;
+  }
+
+  .application-screen-container {
+    width: 200px;
+  }
+
+  .screen-content__header-description-container {
+    text-align: center;
+    gap: 30px;
+  }
+
+  .header__menu {
+    display: inline-block;
+  }
+
+  .profit-cards-container {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    grid-template-columns: repeat(3, 285px);
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+
+  .online-support__chat-participant {
+    font-size: 12px;
+  }
+
+  .dialog {
+    width: 270px;
+  }
+
+  .dialog p {
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  .instructions-screen {
+    height: 1100px;
+    align-content: start;
+    justify-content: start;
+  }
+
+  .instructions-grid {
+    gap: 15px;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instructions-grid__card:nth-child(2),
+  .instructions-grid__card:nth-child(3) {
+    background-color: var(--looton-green);
+  }
+
+  .instructions-grid__card:nth-child(1),
+  .instructions-grid__card:nth-child(4),
+  .instructions-grid__card:nth-child(5) {
+    background-color: var(--looton-white);
+  }
+
+  .screen-content__left-part {
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .download-screen__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .faq-question-answer__icon-wrap {
+    min-width: 25px;  
+    max-width: 25px;
+    height: 25px;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .screen {
     padding: 30px 25px;
   }
 
   .main-screen {
-    height: 790px;
+    height: clamp(600px, 100vh, 790px);
     border-radius: 0 0 20px 20px;
   }
 
   .screen-content-wrapper_centred, .screen-content-wrapper_left {
     width: 100%;
+  }
+
+  .header__menu {
+    display: inline-block;
   }
 
   .main-screen .screen-content-wrapper_centred {
@@ -1356,7 +1505,6 @@ svg {
     align-items: center;
     gap: 75px;
     flex-direction: column;
-    /* margin-top: 100px; */
   }
 
   .nav-wrapper, #cta-button-navigation, .online-support__chat-container {
@@ -1381,7 +1529,6 @@ svg {
     text-align: center;
     gap: 30px;
   }
-
   .application-screen-container {
     width: 200px;
   }
@@ -1413,7 +1560,6 @@ svg {
     overflow-x: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
-    /* overflow: hidden; */
     grid-template-columns: repeat(3, 285px);
   }
 
@@ -1588,9 +1734,12 @@ svg {
   }
 
   .screen-content__header-description-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: calc(20px - 17.8px);
+    align-self: center;
   }
 
   .download-screen__buttons-container {
@@ -1627,11 +1776,13 @@ svg {
   .screen-launch-form__input {
     height: 10px;
     width: calc(100% - 44px);
+    max-width: 360px;
   }
 
   .launch-form {
     width: 100%;
     margin: 35px 0 75px;
+    max-width: 360px;
   }
 
   .screen-launch-form__fields-container > * {
