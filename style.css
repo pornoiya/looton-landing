@@ -6,6 +6,8 @@
   --looton-white: #FFF;
   --looton-bgr-grey: #F8F8F8;
   --looton-green: #40F988;
+  --looton-pale-white: #A1A5AB;
+  --looton-dark: #3F3E3E;
 }
 
 html {
@@ -29,7 +31,6 @@ button {
 .text_large {
   white-space: pre;
   font-size: 6rem;
-  /* margin-bottom: 0.6em; */
 }
 
 .screen {
@@ -60,18 +61,15 @@ button {
 
 .main-screen__cta-button-container {
   width: fit-content;
-  /* height: 7rem; */
 }
 
 .header {
-  /* width: 100%; */
   width: min(110rem, 80vw);
   height: clamp(45px, .8vh, 10rem);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* gap: 45rem; */
 }
 
 .header__right-part-container {
@@ -87,7 +85,6 @@ button {
   font-size: 1.6rem;
   width: auto;
   padding: .54em 2.1em;
-  /* padding: 0.56em 2.1em; */
   border-radius: 50px;
   border: 2px solid var(--looton-green);
 }
@@ -102,7 +99,7 @@ button {
   cursor: pointer;
   letter-spacing: -0.0352rem;
   font-weight: 500;
-  color: #A1A5AB;
+  color: var(--looton-pale-white);
   text-decoration: none;
   
 }
@@ -171,7 +168,7 @@ button {
 }
 
 .text_grey {
-  color: #E2E2E2;
+  color: var(--looton-pale-white);
 }
 
 .page__cta-button {
@@ -292,15 +289,6 @@ button {
   padding: 2.5em;
   height: 20em;
   flex-grow: 1
-  
-  /* font-size: 2rem;
-  min-height: 20rem;
-  border-radius: 2rem;
-  background: var(--looton-white);
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 .profit-cards-container__card:hover, 
@@ -316,19 +304,13 @@ button {
 }
 
 .profit-card__content__header {
-  /* ?? */
-  /* font-size: 2.4rem; */
   font-size: 2.4em;
   font-weight: 500;
   line-height: 110%;
-  /* ?? */
-  /* letter-spacing: -0.005em; */
-  /* white-space: pre; */
   white-space: pre-wrap;
 }
 
 .profit-card__content__icon {
-  /* display: flex; */
   width: 5em;
   min-width: 5em;
   height: 5em;
@@ -393,8 +375,6 @@ button {
 
 .profit-customer-card__header-description-container {
   padding: 2.5em;
-  /* position: relative;
-  z-index: 1; */
 }
 
 .customer-profit_safe-deal, .customer-profit_cdek-delivery, .customer-profit_online-support {
@@ -403,7 +383,6 @@ button {
 }
 
 .profit-customer-card__image-container {
-  /* width: 100%; */
   max-width: 28em;
 
   height: 100%;
@@ -424,7 +403,6 @@ button {
 }
 
 .cdek__cube {
-  /* width: 70%; */
   transform: rotate(30deg) scale(0.7);
   margin-left: 3em;
   margin-top: -1em;
@@ -519,10 +497,6 @@ button {
   height: 4.28em;
 }
 
-/* .dialog {
-  height: 80px;
-} */
-
  .dialog__left, .dialog__right {
   width: 100%;
   height: 100%;
@@ -530,7 +504,6 @@ button {
 
 .dialog__left {
   background: url("public/pictures/dialog-shape.svg") no-repeat;
-  /* background-size: scale(0.7) scale(0.7); */
   padding-left: 3em;
   padding-right: 2em;
 }
@@ -617,7 +590,6 @@ button {
 
 .instructions-grid__card__header-id-container {
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   width: 100%;
   font-size: 1rem;
@@ -837,10 +809,7 @@ svg {
   margin-top: -3rem;
   background-color: var(--looton-black);
   padding-top: 14rem;
-  /* max-height: 55rem; */
   overflow: hidden;
-  /* display: grid;
-  grid-template-columns: 0.7fr 0.3fr; */
 }
 
 .download-screen__content {
@@ -850,15 +819,12 @@ svg {
   justify-content: space-between;
   width: 100%;
   padding-bottom: 150px;
-  /* gap: 10em; */
 }
 
 .application-screen-container, .application-screen-container_medium {
-  /* width: 390px; */
   width: clamp(260px, 42%, 390px);
   background-color: var(--looton-black);
   border-radius: 50rem;
-  /* height: 80%; */
   box-shadow:
   0 0 50px 5px #313030,  /* inner white */
   0 0 100px 5px #272727
@@ -875,7 +841,6 @@ svg {
 
 .text_medium {
   font-size: 5rem;
-
   font-weight: 600;
   line-height: 110%;
   letter-spacing: -0.15rem;
@@ -883,19 +848,15 @@ svg {
 }
 
 .download-screen__left {
-  /* max-width: 70rem; */
   display: flex;
-  /* flex-grow: 1.7fr; */
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  /* padding-bottom: 14rem; */
 }
 
 .download-screen__buttons-container {
   display: flex;
   gap: 3rem;
-  /* margin-top: 5.5rem; */
   height: 7rem;
 }
 
@@ -932,9 +893,6 @@ svg {
 
 .screen-launch-form__container__left {
   padding: 9rem;
-  /* норм работает для меньше 1200 */
-  /* padding: 6rem 0 6rem calc((100vw - min(120rem, 80vw))/2); */
-
   align-items: start;
   justify-content: start;
   width: 100%;
@@ -960,18 +918,14 @@ svg {
   gap: 1em;
   align-items: start;
   justify-content: center;
-  /* font-size: 1.6rem; */
 }
 
 .screen-launch-form__input {
   font-size: 1.8em;
-
-  /* min-width: 280px; */
   width: clamp(270px, 20em, 370px);
   border-radius: 5rem;
   background-color: var(--looton-white);
   padding: 1.25em 1.56em;
-  /* padding: 2rem 2.5rem; */
   color: var(--looton-black);
   font-weight: 400;
   border: none;
@@ -995,8 +949,6 @@ svg {
 .screen-faq {
   background-color: var(--looton-bgr-grey);
   display: flex;
-  /* flex-direction: column;
-  gap: 1.5rem; */
 }
 
 .faq-container {
@@ -1131,7 +1083,7 @@ svg {
 }
 
 .footer-navigation__link {
-  color: #3f3e3e;
+  color: var(--looton-dark);
   font-size: 1.8em;
   font-weight: 500;
   line-height: 100%; /* 18px */
@@ -1151,7 +1103,7 @@ svg {
 }
 
 .footer-contacts {
-  color: #3f3e3e;
+  color: var(--looton-dark);
   font-size: 2.6em;
   font-weight: 600;
   line-height: 100%; /* 26px */
@@ -1171,7 +1123,7 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  color: #3f3e3e;
+  color: var(--looton-dark);
 }
 
 .web-development-link > img {
@@ -1277,41 +1229,6 @@ svg {
     font-size: 1.6rem;
   }
 }
-
-/* @media screen and (max-width: 1023px) {
-  .button_large, .card-title {
-    font-size: 2.1rem;
-  }
-
-  .screen-content__left-part {
-    gap: 60px;
-  }
-
-  .online-support__chat-participant {
-    font-size: 12px;
-  }
-
-  .dialog {
-    width: 270px;
-  }
-
-  .dialog p {
-    width: 90%;
-    margin-top: 15px;
-  }
-
-  .application-screen-container, .application-screen-container_medium {
-    width: clamp(200px, 35%, 360px);
-  }
-
-  .card-description {
-    font-size: 14px;
-  }
-
-  .header__menu {
-    display: inline-block;
-  }
-} */
 
 @media screen and (min-width: 769px) and (max-width: 1022px) {
   .button_large, .card-title {
