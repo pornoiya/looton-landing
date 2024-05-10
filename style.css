@@ -56,7 +56,8 @@ button {
   background-color: var(--looton-black);
   border-radius: 0 0 30px 30px;
   overflow: hidden;
-  padding-top: clamp(14px, 1.5%, 4rem);
+  padding-top: 40px;
+  /* padding-top: clamp(14px, 1.5%, 4rem); */
 }
 
 .main-screen__cta-button-container {
@@ -1231,7 +1232,7 @@ svg {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1022px) {
+@media screen and (max-width: 1023px) {
   .button_large, .card-title {
     font-size: 2.1rem;
   }
@@ -1258,19 +1259,19 @@ svg {
 
   .main-screen {
     height: clamp(600px, 100vh, 790px);
+    padding-top: 20px;
   }
-
-
 
   .menu-sheet {
     padding: 30px 20px;;
     width: 42%;
     max-width: 400px;
-    display: inline;
+    display: flex;
     position: absolute;
     right: 0px;
     top: 0;
-    height: clamp(600px, 100vh, 790px);
+    height: 100%;
+    height: calc(clamp(600px, 100vh, 790px) - 40px);
     background: rgba(82, 82, 82, 0.45);
     backdrop-filter: blur(10px);
     transform: translateX(0px);
@@ -1305,6 +1306,7 @@ svg {
   }
 
   .menu-sheet-content {
+    width: 100%;
     gap: 100px;
   }
 
@@ -1316,8 +1318,6 @@ svg {
     flex-direction: column;
     font-size: 16px;
   }
-
-
 
   .application-screen-container {
     height: 400px;
@@ -1355,11 +1355,6 @@ svg {
 
   .application-screen-container {
     width: 200px;
-  }
-
-  .screen-content__header-description-container {
-    text-align: center;
-    gap: 30px;
   }
 
   .header__menu {
@@ -1429,6 +1424,21 @@ svg {
     padding-bottom: 40px;
   }
 
+  .download-screen-content__header-description-container, 
+  .screen-content__header-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .screen-content__header-description-container {
+    gap: 20px;
+  }
+
   .faq-question-answer__icon-wrap {
     min-width: 25px;  
     max-width: 25px;
@@ -1453,61 +1463,10 @@ svg {
   .header__menu {
     display: inline-block;
   }
-/* 
+
   .menu-sheet {
-    padding: 30px 20px;;
-    width: 42%;
-    max-width: 400px;
-    display: inline;
-    position: absolute;
-    right: 0px;
-    top: 0;
-    height: clamp(600px, 100vh, 790px);
-    background: rgba(82, 82, 82, 0.45);
-    backdrop-filter: blur(10px);
-    transform: translateX(0px);
+    height: calc(clamp(600px, 100vh, 790px));
   }
-
-  #mobile-nav-menu {
-    display: none;
-  }
-
-  #mobile-nav-menu:checked ~ .main-screen__content .menu-sheet {
-    transform: translateX(800px);
-    transition: transform 1s linear;
-  }
-
-  :not(#mobile-nav-menu:checked) ~ .main-screen__content .menu-sheet {
-    transition: transform .1s linear;
-  }
-
-  .menu-sheet-content_header {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-  }
-
-  .menu-sheet-content, .menu-shee-content-nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .page-navigation__item:active {
-    color: var(--looton-white)
-  }
-
-  .menu-sheet-content {
-    gap: 100px;
-  }
-
-  .menu-shee-content-nav {
-    gap: 25px;
-  }
-
-  .menu-shee-content-nav .page-navigation {
-    flex-direction: column;
-    font-size: 16px;
-  } */
 
   .main-screen .screen-content-wrapper_centred {
     width: 100%;
@@ -1559,8 +1518,9 @@ svg {
 
   .screen-content__header-description-container {
     text-align: center;
-    gap: 30px;
+    gap: 130px;
   }
+
   .application-screen-container {
     width: 200px;
   }
@@ -1610,6 +1570,10 @@ svg {
   }
 
   /* Screen 3 */
+  .instructions-screen {
+    height: 800px;
+  }
+
   .instructions-grid, .profits-customer-grid,
   .instructions-grid__card .card-title {
     font-size: 8px;
@@ -1738,6 +1702,10 @@ svg {
   /* Screen 6 */
   .blog-screen {
     height: 211px;
+    background-image: url("public/pictures/white-cube.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: auto 350px;
   }
 
   .blog-screen__content {
@@ -1763,15 +1731,6 @@ svg {
 
   .download-screen {
     padding-top: 100px;
-  }
-
-  .screen-content__header-description-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: calc(20px - 17.8px);
-    align-self: center;
   }
 
   .download-screen__buttons-container {
