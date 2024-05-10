@@ -10,14 +10,15 @@
   <body>
     <section class="screen main-screen">
       <div class="screen-content-wrapper_centred">
+        <input type="checkbox" id="mobile-nav-menu"></input>
         <div class="header">
           <div class="looton-logo">
             <img src="public/pictures/looton-logo.svg" alt="Looton logo"/>
           </div>
           <div class="header__right-part-container">
-            <div class="header__menu">
+            <label for="mobile-nav-menu" class="header__menu">
               <img src="public/icons/burger-menu-icon.svg" aria-hidden="true"/>
-            </div>
+            </label>
             <div class="nav-wrapper">
               <nav class="page-navigation">
                 <a class="page-navigation__item" href="#about-us">О&nbsp;нас</a>
@@ -42,6 +43,29 @@
           </div>
           <div class="application-screen-container">
             <img class="application-screen" src="public/pictures/screen-1.png" alt="looton application main screen" />
+          </div>
+          <div class="menu-sheet">
+            <div class="menu-sheet-content">
+              <div class="menu-sheet-content_header">
+                <label for="mobile-nav-menu" class="menu-sheet-content_header-cross-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                    <path d="M7.07178 21.2139L21.2139 7.07173" stroke="white" stroke-linecap="round"/>
+                    <path d="M21.2129 21.2134L7.07076 7.07124" stroke="white" stroke-linecap="round"/>
+                  </svg>
+                </label>
+              </div>
+              <div class="menu-shee-content-nav">
+                <div class="looton-logo">
+                  <img src="public/pictures/looton-logo.svg" alt="Looton logo"/>
+                </div>
+                <nav class="page-navigation">
+                  <a class="page-navigation__item" href="#about-us">О&nbsp;нас</a>
+                  <a class="page-navigation__item" href="#profits">Преимущества</a> 
+                  <a class="page-navigation__item" href="#faq">FAQ</a> 
+                  <a class="page-navigation__item" href="#contacts">Контакты</a> 
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </div>
