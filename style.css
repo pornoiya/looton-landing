@@ -828,7 +828,7 @@ svg {
   background-color: var(--looton-black);
   border-radius: 50rem;
   box-shadow:
-  0 0 50px 5px #313030,  /* inner white */
+  0 0 50px 5px #313030,  
   0 0 100px 5px #272727
 }
 
@@ -1316,6 +1316,9 @@ svg {
 
   .menu-shee-content-nav .page-navigation {
     flex-direction: column;
+  }
+
+  .page-navigation__item {
     font-size: 16px;
   }
 
