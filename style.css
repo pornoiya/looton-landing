@@ -948,8 +948,7 @@ svg {
 
 /* .show-popup   */
 
-body > *
- {
+body.show-popup > *:not(.screen-launch-form_popup) {
   filter: blur(8px);
 }
 
@@ -972,6 +971,16 @@ body > *
 
   display: flex;
   flex-direction: column;
+  animation: pop-up .4s;
+}
+
+@keyframes pop-up {
+  from {
+    transform: translate(-50%, 200%);
+  }
+  to {
+    transform: translate(-50%, 0%);
+  }
 }
 
 .screen-launch-form_popup__header {

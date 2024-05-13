@@ -450,7 +450,7 @@
           <div class="screen-launch-form__container__left">
             <h2 class="page-header">Узнайте о&nbsp;запуске&NewLine;Looton первым</h2>
             <h3 class="page-description">Пока что сервис в&nbsp;разработке. Оставьте свой&NewLine;e-mail и&nbsp;мы уведомим вас о&nbsp;запуске Looton.</h3>
-            <form class="launch-form">
+            <form class="launch-form" onsubmit="return false">
               <div class="screen-launch-form__fields-container">
                 <div class="screen-launch-form__input-label-container">
                   <label for="launch-form-email" class="screen-launch-form__input-label">Email</label>
@@ -642,7 +642,7 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="screen-launch-form_popup" id="screen-launch-form_popup-success">
+    <div class="screen-launch-form_popup hidden" id="screen-launch-form_popup-success">
       <div class="screen-launch-form_popup__header">
         <button class="screen-launch-form_popup__header-cross-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -660,9 +660,9 @@
           <p class="screen-launch-form_popup__description">Мы пришлём уведомление&NewLine;о запуске</p>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <!-- <div class="screen-launch-form_popup" id="screen-launch-form_popup-email">
+    <div class="screen-launch-form_popup hidden" id="screen-launch-form_popup-email">
       <div class="screen-launch-form_popup__header">
         <button class="screen-launch-form_popup__header-cross-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -679,9 +679,9 @@
           <h3 class="screen-launch-form_popup__title">Ваш Email уже&NewLine;есть в базе</h3>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <div class="screen-launch-form_popup" id="screen-launch-form_popup-error">
+    <div class="screen-launch-form_popup hidden" id="screen-launch-form_popup-error">
       <div class="screen-launch-form_popup__header">
         <button class="screen-launch-form_popup__header-cross-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
