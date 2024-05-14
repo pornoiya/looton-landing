@@ -18,6 +18,7 @@ html {
 body {
   margin: 0;
   background-color: var(--looton-bgr-grey);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -500,8 +501,9 @@ button {
 }
 
  .dialog__left, .dialog__right {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  /* white-space: pre-wrap; */
 }
 
 .dialog__left {
@@ -1358,6 +1360,7 @@ body.show-popup > *:not(.screen-launch-form_popup) {
     height: 100%;
     height: calc(clamp(600px, 100vh, 790px) - 40px);
     background: rgba(82, 82, 82, 0.45);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transform: translateX(0px);
   }
@@ -1452,10 +1455,17 @@ body.show-popup > *:not(.screen-launch-form_popup) {
   .profit-cards-container {
     width: 100%;
     overflow-x: scroll;
+
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
     grid-template-columns: repeat(3, 285px);
   }
+
+  .profit-cards-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+}
 
   .card-description {
     font-size: 14px;
@@ -1726,7 +1736,15 @@ body.show-popup > *:not(.screen-launch-form_popup) {
   .customer-profit_online-support 
   .profit-customer-card__header-description-container {
     padding: 2.5em;
+    white-space: normal;
   }
+
+  .profits-customer-grid__card.customer-profit_cdek-delivery {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
 
   /* Screen 4 */
   .instructions-grid {
