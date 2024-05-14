@@ -134,7 +134,7 @@ button {
 .screen-content__header-description-container {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 .main-screen__content__left {
@@ -826,10 +826,6 @@ svg {
 .application-screen-container, .application-screen-container_medium {
   width: clamp(260px, 42%, 390px);
   background-color: var(--looton-black);
-  border-radius: 50rem;
-  box-shadow:
-  0 0 50px 5px #313030,  
-  0 0 100px 5px #272727
 }
 
 .application-screen-container_medium {
@@ -1548,6 +1544,10 @@ body.show-popup > *:not(.screen-launch-form_popup) {
     border-radius: 0 0 20px 20px;
   }
 
+  .customer-profit_online-support .profit-card__content__icon {
+    display: flex;
+  }
+
   .screen-content-wrapper_centred, .screen-content-wrapper_left {
     width: 100%;
   }
@@ -1610,7 +1610,7 @@ body.show-popup > *:not(.screen-launch-form_popup) {
 
   .screen-content__header-description-container {
     text-align: center;
-    gap: 130px;
+    gap: 30px;
   }
 
   .application-screen-container {
@@ -1717,7 +1717,7 @@ body.show-popup > *:not(.screen-launch-form_popup) {
   }
 
   .profit-card__content__icon {
-    display: inline-flex;
+    display: flex;
     width: 30px;
     min-width: 30px;
     height: 30px;
