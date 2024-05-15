@@ -535,6 +535,7 @@ button {
 }
 
 .chip-customer-seller-toggle {
+  color: var(--looton-black);
   border-radius: 2.5rem;
   border: 2px solid var(--looton-black);
   padding: 0.5rem 1.5rem;

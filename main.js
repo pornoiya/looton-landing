@@ -20,9 +20,3 @@ const popupCrossButton = document.getElementsByClassName("screen-launch-form_pop
 for (let btn of popupCrossButton) {
     btn.addEventListener('click', onPopupClose)
 }
-
-const screens = document.getElementsByClassName("application-screen");
-for (let screen of screens) {
-    screen.classList.remove("hidden")
-    screen.classList.add("screen-bgr-shadow")
-}
