@@ -835,6 +835,17 @@ svg {
   width: 260px;
 }
 
+.application-screen {
+  box-shadow:
+  0 0 50px 10px #1b1b1b,  /* inner white */
+  0 0 70px 20px #000000;
+  border-radius: 67px;
+}
+
+.application-screen-container_medium .application-screen  {
+  border-radius: 50px;
+}
+
 .application-screen-container .application-screen, 
 .application-screen-container_medium .application-screen {
   width: 100%;
@@ -1304,6 +1315,14 @@ body.show-popup > *:not(.screen-launch-form_popup) {
   .profit-cards-container {
     gap: 10px;
   }
+
+  .application-screen {
+    border-radius: 53px;
+  }
+  
+  .application-screen-container_medium .application-screen  {
+    border-radius: 50px;
+  }
 }
 
 @media screen and (max-width: 1085px) {
@@ -1317,6 +1336,14 @@ body.show-popup > *:not(.screen-launch-form_popup) {
 
   .page-description {
     font-size: 1.6rem;
+  }
+
+  .application-screen {
+    border-radius: 50px;
+  }
+  
+  .application-screen-container_medium .application-screen  {
+    border-radius: 50px;
   }
 }
 
@@ -1413,6 +1440,14 @@ body.show-popup > *:not(.screen-launch-form_popup) {
 
   .application-screen-container {
     height: 400px;
+  }
+
+  .application-screen {
+    border-radius: 35px;
+  }
+  
+  .application-screen-container_medium .application-screen  {
+    border-radius: 45px;
   }
 
   .main-screen__content {

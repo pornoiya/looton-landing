@@ -18,18 +18,18 @@ export function onSumbit() {
     if (checkEmail(email)) {
         body.classList.add("show-popup"); 
         successPopup.classList.remove("hidden");
-        // const requestOptions = {
-        //     method: 'PUT',
-        //     headers: { 
-        //         'Content-Type': 'application/json',
-        //         'Access-Control-Allow-Origin': '*',
-        //         'Access-Control-Allow-Methods': 'GET,PUT,POST',
-        //         'Access-Control-Allow-Headers': '*',
-        //         'Access-Control-Allow-Credentials': 'true'
-        //      },
-        //     body: JSON.stringify({ email })
-        // }
-        // fetch("https://dev.looton.ru/promo/v1/email", requestOptions)
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 
+                'Content-Type': 'application/json',
+                // 'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST',
+                'Access-Control-Allow-Headers': '*',
+                'Access-Control-Allow-Credentials': 'true'
+             },
+            body: JSON.stringify({ email })
+        }
+        fetch("https://dev.looton.ru/promo/v1/email", requestOptions)
     }
 }
 
