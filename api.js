@@ -22,14 +22,14 @@ export function onSumbit() {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json',
-                // 'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET,PUT,POST',
                 'Access-Control-Allow-Headers': '*',
                 'Access-Control-Allow-Credentials': 'true'
              },
             body: JSON.stringify({ email })
         }
-        fetch("https://dev.looton.ru/promo/v1/email", requestOptions)
+        fetch("http://dev.looton.ru/promo/v1/email", requestOptions)
     }
 }
 

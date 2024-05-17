@@ -58,11 +58,15 @@ button {
   border-radius: 0 0 30px 30px;
   overflow: hidden;
   padding-top: 40px;
-  /* padding-top: clamp(14px, 1.5%, 4rem); */
+  position: relative;
 }
 
 .main-screen__cta-button-container {
   width: fit-content;
+}
+
+.menu-sheet {
+  display: none;
 }
 
 .header {
@@ -1497,11 +1501,25 @@ body.show-popup > *:not(.screen-launch-form_popup) {
     grid-template-columns: repeat(3, 285px);
   }
 
+  #profits {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #profits .page-header {
+    padding: 0px 25px;
+  }
+
+  #profits .caption-chip {
+    margin-left: 25px;
+  }
+
   .profit-cards-container::-webkit-scrollbar {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     width: 0;
-    height: 0;
-}
+    height: 0; */
+    display: none;
+  }
 
   .card-description {
     font-size: 14px;
