@@ -1515,9 +1515,6 @@ body.show-popup > *:not(.screen-launch-form_popup) {
   }
 
   .profit-cards-container::-webkit-scrollbar {
-    /* -webkit-appearance: none;
-    width: 0;
-    height: 0; */
     display: none;
   }
 

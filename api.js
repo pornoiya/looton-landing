@@ -1,12 +1,10 @@
-import axios from "axios";
-
 function checkEmail(email) {
     return String(email)
     .toLowerCase()
     .match(/^\S+@\S+$/);
 }
 
-export function onSumbit() {
+export async function onSumbit() {
     const emailField = document.getElementById("launch-form-email");
     const successPopup = document.getElementById("screen-launch-form_popup-success");
     const emailPopup = document.getElementById("screen-launch-form_popup-email");
@@ -22,12 +20,8 @@ export function onSumbit() {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET,PUT,POST',
-                'Access-Control-Allow-Headers': '*',
-                'Access-Control-Allow-Credentials': 'true'
              },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ "email": email })
         }
         fetch("http://dev.looton.ru/promo/v1/email", requestOptions)
     }
