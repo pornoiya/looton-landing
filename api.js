@@ -1,18 +1,31 @@
+const EMAIL_IS_EXIST_IN_PROMO_ERROR_CODE = "EMAIL_IS_EXIST_IN_PROMO";
+const CANNOT_ADD_EMAIL_IN_PROMO_ERROR_CODE = "CANNOT_ADD_EMAIL_IN_PROMO";
+
+const SUCCESS_POPUP = { 
+    icon: '<img src="public/icons/success-icon.svg" aria-hidden="true" />',
+    title: 'Email отправлен',
+    description: 'Мы пришлём уведомление&NewLine;о запуске'
+}
+const EMAIL_POPUP = { 
+    icon: '<img src="public/icons/email-icon.png" aria-hidden="true" />',
+    title: 'Ваш Email уже&NewLine;есть в базе',
+}
+const ERROR_POPUP = { 
+    icon: '<img src="public/icons/error-icon.png" aria-hidden="true" />',
+    title: 'Ошибка',
+    description: 'Что-то пошло не так,&NewLine;но мы уже разбираемся'
+}
+
+
 function checkEmail(email) {
     return String(email)
     .toLowerCase()
-    .match(/^\S+@\S+$/);
+    .match(/^\S+@\S+\.\S+$/);
 }
-
-const EMAIL_IS_EXIST_IN_PROMO_ERROR_CODE = "EMAIL_IS_EXIST_IN_PROMO";
-const EMAIL_IS_NOT_CORRECT_ERROR_CODE = "EMAIL_IS_NOT_CORRECT";
-const CANNOT_ADD_EMAIL_IN_PROMO_ERROR_CODE = "CANNOT_ADD_EMAIL_IN_PROMO";
 
 export async function onSumbit() {
     const emailField = document.getElementById("launch-form-email");
-    const successPopup = document.getElementById("screen-launch-form_popup-success");
-    const emailPopup = document.getElementById("screen-launch-form_popup-email");
-    const errorPopup = document.getElementById("screen-launch-form_popup-error");
+
     const email = emailField?.value;
 
     if (checkEmail(email)) {
@@ -26,36 +39,57 @@ export async function onSumbit() {
         }
         try {
             const response = await fetch(url, requestOptions);
+            const jsonRespoonse = await response.json();
 
             if (response?.ok) {
-                const jsonRespoonse = await response.json();
                 if (jsonRespoonse.success) {
-                    openPopup(successPopup);
+                    openPopup(SUCCESS_POPUP);
                 } else {
                     const id = jsonRespoonse?.error?.id;
+                    const errorMessage = jsonRespoonse?.error?.message;
+
                     if (id === EMAIL_IS_EXIST_IN_PROMO_ERROR_CODE) {
-                        openPopup(emailPopup);
+                        openPopup(EMAIL_POPUP);
                     } else if (id === CANNOT_ADD_EMAIL_IN_PROMO_ERROR_CODE) {
-                        openPopup(errorPopup);
+                        openPopup(ERROR_POPUP, errorMessage);
                     } else {
-                        console.log("ERRROR");
+                        openPopup(ERROR_POPUP, errorMessage);
                     }
                 }
+            } else {
+                console.error(`Error submitting email ${email}: ${jsonRespoonse?.error?.message}`);
+                openPopup(ERROR_POPUP, jsonRespoonse?.error?.message);
             }
         }
         catch (error) {
             console.error(`Error submitting email ${email}: ${error}`);
         }
-        // body.classList.add("show-popup"); 
-        // successPopup.classList.remove("hidden");
+    } else {
+        openPopup(ERROR_POPUP, "Невалидный e-mail");
     }
 }
 
-function openPopup(popup) {
+/**
+ * @function
+ * Function that opens popup
+ * @param { Object } popup – popup to open with fields "{ icon: string, title: string, description: string }"
+ * @param { string } errorMessage
+ */
+
+function openPopup(popupType, errorMessage) {
+    const iconWrapper = document.getElementById("launch-form_popup__content__icon");
+    const title = document.getElementById("launch-form_popup__title");
+    const description = document.getElementById("launch-form_popup__description");
+    
+    const popupElement = document.getElementById("launch-form_popup");
     const body = document.getElementsByTagName("body")?.[0];
 
+    iconWrapper.innerHTML = popupType.icon;
+    title.innerHTML = popupType.title;
+    description.innerHTML = errorMessage ?? popupType.description ?? "";
+
     body.classList.add("show-popup"); 
-    popup.classList.remove("hidden");
+    popupElement.classList.remove("hidden");
 }
 
 export function onPopupClose() {

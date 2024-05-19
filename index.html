@@ -643,7 +643,8 @@
         </div>
       </div>
     </footer>
-    <div class="screen-launch-form_popup hidden" id="screen-launch-form_popup-success">
+
+    <div class="screen-launch-form_popup hidden" id="launch-form_popup">
       <div class="screen-launch-form_popup__header">
         <button class="screen-launch-form_popup__header-cross-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -653,51 +654,12 @@
         </button>
       </div>
       <div class="screen-launch-form_popup__content">
-        <div class="screen-launch-form_popup__content__icon">
+        <div class="screen-launch-form_popup__content__icon" id="launch-form_popup__content__icon">
           <img src="public/icons/success-icon.svg" aria-hidden="true" />
         </div>
         <div class="screen-launch-form_popup__content__text-wrapper">
-          <h3 class="screen-launch-form_popup__title">Email отправлен</h3>
-          <p class="screen-launch-form_popup__description">Мы пришлём уведомление&NewLine;о запуске</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-launch-form_popup hidden" id="screen-launch-form_popup-email">
-      <div class="screen-launch-form_popup__header">
-        <button class="screen-launch-form_popup__header-cross-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-            <path d="M6.8689 7.80859L21.011 21.9507" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
-            <path d="M7.27283 21.9502L21.415 7.80806" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-      <div class="screen-launch-form_popup__content">
-        <div class="screen-launch-form_popup__content__icon">
-          <img src="public/icons/email-icon.png" aria-hidden="true" />
-        </div>
-        <div class="screen-launch-form_popup__content__text-wrapper">
-          <h3 class="screen-launch-form_popup__title">Ваш Email уже&NewLine;есть в базе</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="screen-launch-form_popup hidden" id="screen-launch-form_popup-error">
-      <div class="screen-launch-form_popup__header">
-        <button class="screen-launch-form_popup__header-cross-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-            <path d="M6.8689 7.80859L21.011 21.9507" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
-            <path d="M7.27283 21.9502L21.415 7.80806" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-      <div class="screen-launch-form_popup__content">
-        <div class="screen-launch-form_popup__content__icon">
-          <img src="public/icons/error-icon.png" aria-hidden="true" />
-        </div>
-        <div class="screen-launch-form_popup__content__text-wrapper">
-          <h3 class="screen-launch-form_popup__title">Ошибка</h3>
-          <p class="screen-launch-form_popup__description">Что-то пошло не так,&NewLine;но мы уже разбираемся</p>
+          <h3 class="screen-launch-form_popup__title" id="launch-form_popup__title">Email отправлен</h3>
+          <p class="screen-launch-form_popup__description" id="launch-form_popup__description">Мы пришлём уведомление&NewLine;о запуске</p>
         </div>
       </div>
     </div>
