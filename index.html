@@ -1,541 +1,667 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Looton</title>
   </head>
   <body>
     <section class="screen main-screen">
-      <div class="header">
-        <div class="looton-logo">
-          <img src="public/pictures/looton-logo.svg" alt="Looton logo"/>
-        </div>
-        <div class="header__right-part-container">
-          <div class="nav-wrapper">
-            <!-- To-Do: add refs -->
-            <nav class="page-navigation">
-              <a class="page-navigation__item" href="">О&nbsp;нас</a>
-              <a class="page-navigation__item" href="">Преимущества</a> 
-              <a class="page-navigation__item" href="">FAQ</a> 
-              <a class="page-navigation__item" href="">Контакты</a> 
-            </nav>
+      <div class="screen-content-wrapper_centred">
+        <input type="checkbox" id="mobile-nav-menu" checked />
+        <div class="header">
+          <div class="looton-logo">
+            <img src="public/pictures/looton-logo.svg" alt="Looton logo"/>
           </div>
-          <button id="cta-button-navigation" class="page__cta-button button_medium button_white">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
+          <div class="header__right-part-container">
+            <label for="mobile-nav-menu" class="header__menu">
+              <img src="public/icons/burger-menu-icon.svg" aria-hidden="true"/>
+            </label>
+            <div class="nav-wrapper">
+              <nav class="page-navigation">
+                <a class="page-navigation__item" href="#about-us">О&nbsp;нас</a>
+                <a class="page-navigation__item" href="#profits">Преимущества</a> 
+                <a class="page-navigation__item" href="#faq">FAQ</a> 
+                <a class="page-navigation__item" href="#contacts">Контакты</a> 
+              </nav>
+            </div>
+            <a href="#launch-form" id="cta-button-navigation" class="a-tag_cta page__cta-button button_medium button_white">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"/></a>
+          </div>
         </div>
-      </div>
 
-      <div class="main-screen__content">
-        <div class="main-screen__content__left">
-          <div>
-            <h1 class="page-header__gradient__large">Looton — сервис&NewLine;для&nbsp;покупки новых&NewLine;вещей и&nbsp;ресейла</h1>
-            <h3 class="page-description page-description_grey">Продавайте одежду и аксессуары с комиссией до 5%,&NewLine;покупайте оригинальные вещи быстро и безопасно</h3>  
+        <div class="main-screen__content">
+          <div class="screen-content__left-part">
+            <div class="screen-content__header-description-container">
+              <h1 class="text_large text-bold_grey-gradient">Looton — сервис&NewLine;для&nbsp;покупки новых&NewLine;вещей и&nbsp;ресейла</h1>
+              <h3 class="page-description text_grey">Продавайте одежду и аксессуары с комиссией до 5%,&NewLine;покупайте оригинальные вещи быстро и безопасно</h3>  
+            </div>
+            <div class="main-screen__cta-button-container">
+              <a href="#launch-form" class="a-tag_cta page__cta-button page__cta-button_gradient button_large">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"/></a>
+            </div>
           </div>
-         <button class="page__cta-button page__cta-button_gradient button_large">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img></button>
-        </div>
-        <div class="application-screen-container">
-          <img class="application-screen" src="public/pictures/screen-1.png" alt="looton application main screen" />
+          <div class="application-screen-container">
+            <img class="application-screen" src="public/pictures/screen-1.png" alt="looton application main screen"/>
+          </div>
+          <div class="menu-sheet">
+            <div class="menu-sheet-content">
+              <div class="menu-sheet-content_header">
+                <label for="mobile-nav-menu" class="menu-sheet-content_header-cross-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                    <path d="M7.07178 21.2139L21.2139 7.07173" stroke="white" stroke-linecap="round"/>
+                    <path d="M21.2129 21.2134L7.07076 7.07124" stroke="white" stroke-linecap="round"/>
+                  </svg>
+                </label>
+              </div>
+              <div class="menu-shee-content-nav">
+                <div class="looton-logo">
+                  <img src="public/pictures/looton-logo.svg" alt="Looton logo"/>
+                </div>
+                <nav class="page-navigation">
+                  <a class="page-navigation__item" href="#about-us">О&nbsp;нас</a>
+                  <a class="page-navigation__item" href="#profits">Преимущества</a> 
+                  <a class="page-navigation__item" href="#faq">FAQ</a> 
+                  <a class="page-navigation__item" href="#contacts">Контакты</a> 
+                </nav>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Screen 2 -->
-    <section class="screen profits-screen">
-      <div class="caption-chip">Преимущества</div>
-      <h2 class="page-header">Продавайте&NewLine;выгодно и&nbsp;безопасно</h2>
-      <div class="profit-cards-container">
-      <article class="profit-cards-container__card">
-        <div class="profit-card__header-icon-container">
-          <h4 class="profit-card__content__header">Первая сделка –– &NewLine;без&nbsp;комиссии</h4>
-          <div class="profit-card__content__icon">
-            <img src="public/icons/profits-card-present-icon.jpg" />
-          </div>
+    <section class="screen profits-screen" id="profits">
+      <div class="screen-content-wrapper_left">
+        <div class="caption-chip">Преимущества</div>
+        <h2 class="page-header">Продавайте&NewLine;выгодно и&nbsp;безопасно</h2>
+        <div class="profit-cards-container">
+          <article class="profit-cards-container__card">
+            <div class="profit-card__header-icon-container">
+              <h4 class="profit-card__content__header">Первая сделка&nbsp;–– без&nbsp;комиссии</h4>
+              <div class="profit-card__content__icon">
+                <img src="public/icons/profits-card-present-icon.jpg" aria-hidden="true"/>
+              </div>
+            </div>
+            <p class="card-description">Разместите свой первый лот, Looton не возьмёт комиссию с&nbsp;его продажи</p>
+          </article>
+          <article class="profit-cards-container__card">
+            <div class="profit-card__header-icon-container">
+              <h4 class="profit-card__content__header">Сервисный&NewLine;сбор 5%</h4>
+              <div class="profit-card__content__icon">
+                <img src="public/icons/profits-card-coin-icon.jpg" aria-hidden="true"/>
+              </div>
+            </div>
+            <p class="card-description">Комиссия сервиса за&nbsp;продажу вещи не превышает 5%. Размещение лота –– абсолютно бесплатно</p>
+          </article>
+          <article class="profit-cards-container__card">
+            <div class="profit-card__header-icon-container">
+              <h4 class="profit-card__content__header">Страхование&NewLine;заказа</h4>
+              <div class="profit-card__content__icon">
+                <img src="public/icons/profits-card-lock-icon.jpg" aria-hidden="true"/>
+              </div>
+            </div>
+            <p class="card-description">Выплатим 100% компенсацию, если посылку повредят или&nbsp;потеряют</p>
+          </article>
         </div>
-        <p class="profit-card__description">Разместите свой первый лот, Looton не возьмёт комиссию с&nbsp;его продажи</p>
-      </article>
-      <article class="profit-cards-container__card">
-        <div class="profit-card__header-icon-container">
-          <h4 class="profit-card__content__header">Сервисный&NewLine;сбор 5%</h4>
-          <div class="profit-card__content__icon">
-            <img src="public/icons/profits-card-coin-icon.jpg" />
-          </div>
-        </div>
-        <p class="profit-card__description">Комиссия сервиса за&nbsp;продажу вещи не превышает 5%. Размещение лота –– абсолютно бесплатно</p>
-      </article>
-      <article class="profit-cards-container__card">
-        <div class="profit-card__header-icon-container">
-          <h4 class="profit-card__content__header">Страхование&NewLine;заказа</h4>
-          <div class="profit-card__content__icon">
-            <img src="public/icons/profits-card-lock-icon.jpg" />
-          </div>
-        </div>
-        <p class="profit-card__description">Выплатим 100% компенсацию, если посылку повредят или&nbsp;потеряют</p>
-      </article>
+      </div>
     </section>
 
     <!-- Screen 3 -->
     <section class="screen profits-screen">
-      <div class="caption-chip">Преимущества</div>
-      <h2 class="page-header">Покупайте оригинальные&NewLine;брендовые вещи</h2>
-      <div class="profits-customer-grid">
-        <article class="profits-customer-grid__card customer-profit_safe-deal">
-          <div class="profit-customer-card__header-description-container">
-            <h4 class="profit-customer-card__header">Безопасная сделка</h4>
-            <p class="profit-customer-card__description">Берем на&nbsp;себя ответственность за&nbsp;безопасность вашей сделки&nbsp;–– оплата произойдёт только после получения заказа</p>
-          </div>
-          <div class="profit-customer-card__image-container">
-            <img class="safe-deal__cube" src="public/pictures/black_cube.png"/>
-          </div>
-        </article>
-        <article class="profits-customer-grid__card customer-profit_real-reviews">
-          <div class="profit-card__header-icon-container">
-            <h4 class="profit-customer-card__header">Отзывы от&nbsp;реальных&NewLine;покупателей</h4>
-            <div class="profit-card__content__icon"><img src="public/icons/thumbs-up-icon.jpg" /></div>
-          </div>
-          <p class="profit-card__description">Мы ценим ваше доверие, поэтому анализируем отзывы пользователей, чтобы&nbsp;избежать «накрутки»</p>
-        </article>
-        <article class="profits-customer-grid__card customer-profit_original-check">
-          <div class="profit-card__header-icon-container">
-            <h4 class="profit-customer-card__header">Проверка&NewLine;подлинности вещей</h4>
-            <div class="profit-card__content__icon"><img src="public/icons/discover-icon.jpg" /></div>
-          </div>
-          <p class="profit-card__description">Перед публикацией наши  модераторы и&nbsp;эксперты внимательно проверяют каждую&nbsp;вещь по&nbsp;фотографиям изделия</p>
-        </article>
-        <article class="profits-customer-grid__card customer-profit_cdek-delivery">
-          <div class="profit-customer-card__header-description-container">
-            <h4 class="profit-customer-card__header">Доставка СДЭК</h4>
-            <p class="profit-card__description">Доставим заказ в&nbsp;45&nbsp;000+ населённых пунктов</p>
-          </div>
-          <div class="profit-customer-card__image-container">
-            <img class="cdek__cube" src="public/pictures/black_cube.png"/>
-          </div>
-        </article>
-        <article class="profits-customer-grid__card customer-profit_online-support">
-          <div>
-            <h4 class="profit-customer-card__header">Онлайн поддержка 24/7</h4>
-            <p class="profit-card__description">Ответим на&nbsp;все интересующие вас вопросы на&nbsp;любом этапе заказа</p>
-          </div>
-          <div class="online-support__chat-container">
-            <div class="online-support__chat-participant online-support__chat-participant_right">
-              <div class="dialog dialog__right">
-                <p>Добрый день! А&nbsp;сколько времени занимает доставка?</p>
+      <div class="screen-content-wrapper_left">
+        <div class="caption-chip">Преимущества</div>
+        <h2 class="page-header">Покупайте оригинальные&NewLine;брендовые вещи</h2>
+        <div class="profits-customer-grid">
+          <article class="profits-customer-grid__card customer-profit_safe-deal">
+            <div class="profit-customer-card__header-description-container">
+              <h4 class="card-title">Безопасная сделка</h4>
+              <p class="card-description">Берем на&nbsp;себя ответственность за&nbsp;безопасность вашей сделки&nbsp;–– оплата произойдёт только после получения заказа</p>
+            </div>
+            <div class="profit-customer-card__image-container">
+              <img class="safe-deal__cube" src="public/pictures/black_cube.png" alt="Black cube"/>
+            </div>
+          </article>
+          <article class="profits-customer-grid__card customer-profit_real-reviews">
+            <div class="profit-card__header-icon-container">
+              <h4 class="card-title">Отзывы от&nbsp;реальных&NewLine;покупателей</h4>
+              <div class="profit-card__content__icon"><img src="public/icons/thumbs-up-icon.jpg" aria-hidden="true"/></div>
+            </div>
+            <p class="card-description">Мы ценим ваше доверие, поэтому анализируем отзывы пользователей, чтобы&nbsp;избежать «накрутки»</p>
+          </article>
+          <article class="profits-customer-grid__card customer-profit_original-check">
+            <div class="profit-card__header-icon-container">
+              <h4 class="card-title">Проверка&NewLine;подлинности вещей</h4>
+              <div class="profit-card__content__icon"><img src="public/icons/discover-icon.jpg" aria-hidden="true"/></div>
+            </div>
+            <p class="card-description">Перед публикацией наши  модераторы и&nbsp;эксперты внимательно проверяют каждую&nbsp;вещь по&nbsp;фотографиям изделия</p>
+          </article>
+          <article class="profits-customer-grid__card customer-profit_cdek-delivery">
+            <div class="profit-customer-card__header-description-container">
+              <h4 class="card-title">Доставка СДЭК</h4>
+              <p class="card-description">Доставим заказ в&nbsp;45&nbsp;000+ населённых пунктов</p>
+            </div>
+            <div class="profit-customer-card__image-container">
+              <img class="cdek__cube" src="public/pictures/black_cube.png" alt="Black cube"/>
+            </div>
+          </article>
+          <article class="profits-customer-grid__card customer-profit_online-support">
+            <div class="profit-customer-card__header-description-container">
+              <div class="profit-card__header-icon-container">
+                <h4 class="card-title">Онлайн поддержка&NewLine;24/7</h4>
+                <div class="profit-card__content__icon">
+                  <img src="public/icons/chat-icon.svg" aria-hidden="true"/>
+                </div>
               </div>
-              <div class="avatar">
-                <img src="public/pictures/support-customer-avatar.jpg" />
+              <p class="card-description">Ответим на&nbsp;все интересующие вас&NewLine;вопросы на&nbsp;любом этапе заказа</p>
+            </div>
+            <div class="online-support__chat-container">
+              <div class="online-support__chat-participant online-support__chat-participant_right">
+                <div class="dialog dialog__right">
+                  <p>Добрый день! А&nbsp;сколько времени&NewLine;занимает доставка?</p>
+                </div>
+                <div class="avatar">
+                  <img src="public/pictures/support-customer-avatar.jpg" alt="Chat user avatar"/>
+                </div>
+              </div>
+              <div class="online-support__chat-participant online-support__chat-participant_left">
+                <div class="avatar">
+                  <img src="public/pictures/support-avatar.jpg" alt="chat support avatar"/>
+                </div>
+                <div class="dialog dialog__left">
+                  <p>Здравствуйте! Обычно доставка&NewLine;занимает до&nbsp;7&nbsp;рабочих дней.</p>
+                </div>
               </div>
             </div>
-            <div class="online-support__chat-participant online-support__chat-participant_left">
-              <div class="avatar">
-                <img src="public/pictures/support-avatar.jpg" />
-              </div>
-              <div class="dialog dialog__left">
-                <p>Здравствуйте! Обычно доставка занимает до&nbsp;7&nbsp;рабочих дней.</p>
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Screen 4 -->
-    <section class="screen instructions-screen">
-      <div class="customer-seller-toggle-container">
-        <button class="customer-seller-toggle customer-seller-toggle__checked" id="instructions__sellers" onclick="">
-          Для продавцов 
-          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
-        </button>
-        <button class="customer-seller-toggle" id="instructions__customers">
-          Для покупателей 
-          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
-        </button>
-      </div>
-      <h2 class="page-header">Как работает Looton</h2>
-      <div class="instructions-grid sellers">
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Подготовьте вещь к&nbsp;продаже</h4>
-            <h3 class="instructions-grid__card__id">01</h3>
-          </div>
-          <p class="instructions-grid__card__description">Приведите вещь в&nbsp;надлежащий вид: постирайте или&nbsp;сдайте 
-            в&nbsp;химчистку при&nbsp;необходимости.
-            Сфотографируйте вещь 
-            на&nbsp;нейтральном фоне, следуя подсказкам в&nbsp;приложении.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Разместите объявление</h4>
-            <h3 class="instructions-grid__card__id">02</h3>
-          </div>
-          <p class="instructions-grid__card__description">Напишите размер и&nbsp;материал вещи, её&nbsp;состояние и&nbsp;дефекты. Укажите иную информацию, которая будет полезна покупателю.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Дождитесь проверки объявления</h4>
-            <h3 class="instructions-grid__card__id">03</h3>
-          </div>
-          <p class="instructions-grid__card__description">В&nbsp;среднем это&nbsp;занимает примерно 2&nbsp;часа. 
-            Если объявление прошло проверку, оно появится на&nbsp;главной странице сервиса.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Дождитесь оформления заказа</h4>
-            <h3 class="instructions-grid__card__id">04</h3>
-          </div>
-          <p class="instructions-grid__card__description">Упакуйте и&nbsp;отправьте вещь 
-            в&nbsp;любом пункте СДЭК.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Получите выплату</h4>
-            <h3 class="instructions-grid__card__id">05</h3>
-          </div>
-          <p class="instructions-grid__card__description">Банк зарезрвирует деньги за&nbsp;покупку, а&nbsp;мы отправим их, когда покупатель получит товар и&nbsp;убедится, что он соответствует описанию.</p>
-        </article>
-      </div>
+    <section class="screen instructions-screen" id="about-us">
+      <div class="screen-content-wrapper_left">
+        <div class="customer-seller-toggle-container">
+          <button class="chip-customer-seller-toggle chip-customer-seller-toggle__checked" id="chip-instructions__sellers">
+            Для продавцов 
+            <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" />
+          </button>
+          <button class="chip-customer-seller-toggle" id="chip-instructions__customers">
+            Для покупателей 
+            <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" />
+          </button>
+        </div>
+        <h2 class="page-header">Как работает Looton</h2>
+        <div class="instructions-grid" id="instructions__sellers">
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Подготовьте&NewLine;вещь к&nbsp;продаже</h4>
+              <h3 class="instructions-grid__card__id">01</h3>
+            </div>
+            <p class="card-description">Приведите вещь в&nbsp;надлежащий вид: постирайте или&nbsp;сдайте 
+              в&nbsp;химчистку при&nbsp;необходимости.
+              Сфотографируйте вещь 
+              на&nbsp;нейтральном фоне, следуя подсказкам в&nbsp;приложении.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Разместите&NewLine;объявление</h4>
+              <h3 class="instructions-grid__card__id">02</h3>
+            </div>
+            <p class="card-description">Напишите размер и&nbsp;материал вещи, её&nbsp;состояние и&nbsp;дефекты. Укажите иную информацию, которая будет полезна покупателю.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Дождитесь&NewLine;проверки&NewLine;объявления</h4>
+              <h3 class="instructions-grid__card__id">03</h3>
+            </div>
+            <p class="card-description">В&nbsp;среднем это&nbsp;занимает примерно 2&nbsp;часа. 
+              Если объявление прошло проверку, оно появится на&nbsp;главной странице сервиса.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Дождитесь&NewLine;оформления&NewLine;заказа</h4>
+              <h3 class="instructions-grid__card__id">04</h3>
+            </div>
+            <p class="card-description">Упакуйте и&nbsp;отправьте вещь 
+              в&nbsp;любом пункте СДЭК.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Получите&NewLine;выплату</h4>
+              <h3 class="instructions-grid__card__id">05</h3>
+            </div>
+            <p class="card-description">Банк зарезрвирует деньги за&nbsp;покупку, а&nbsp;мы отправим их, когда покупатель получит товар и&nbsp;убедится, что он соответствует описанию.</p>
+          </article>
+        </div>
 
-      <div class="instructions-grid customers instructions-grid__hidden">
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Создание объявления</h4>
-            <h3 class="instructions-grid__card__id">01</h3>
-          </div>
-          <p class="instructions-grid__card__description">В&nbsp;описании товара указываются размер и&nbsp;материал вещи, её состояние и&nbsp;дефекты, а&nbsp;так же город, из&nbsp;которого будет отправлен заказ.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Модерация</h4>
-            <h3 class="instructions-grid__card__id">02</h3>
-          </div>
-          <p class="instructions-grid__card__description">Наши модераторы и&nbsp;эксперты проверяют объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Публикация на&nbsp;главной странице</h4>
-            <h3 class="instructions-grid__card__id">03</h3>
-          </div>
-          <p class="instructions-grid__card__description">Если эксперты сделали вывод об&nbsp;оригинальности товара и&nbsp;соответствии описанию.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Оформление заказа</h4>
-            <h3 class="instructions-grid__card__id">04</h3>
-          </div>
-          <p class="instructions-grid__card__description">Выберите удобный пункт самовывоза в&nbsp;приложении 
-            и укажите данные получателя.</p>
-        </article>
-        <article class="instructions-grid__card">
-          <div class="instructions-grid__card__header-id-container">
-            <h4 class="instructions-grid__card__header">Получение товара</h4>
-            <h3 class="instructions-grid__card__id">05</h3>
-          </div>
-          <p class="instructions-grid__card__description">Убедитесь, что товар соответствует описанию. После&nbsp;вашего подтверждения деньги за&nbsp;заказ перечислятся на&nbsp;счёт продавца.</p>
-        </article>
+        <div class="instructions-grid hidden" id="instructions__customers">
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Создание&NewLine;объявления</h4>
+              <h3 class="instructions-grid__card__id">01</h3>
+            </div>
+            <p class="card-description">В&nbsp;описании товара указываются размер и&nbsp;материал вещи, её состояние и&nbsp;дефекты, а&nbsp;так же город, из&nbsp;которого будет отправлен заказ.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Модерация</h4>
+              <h3 class="instructions-grid__card__id">02</h3>
+            </div>
+            <p class="card-description">Наши модераторы и&nbsp;эксперты проверяют объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Публикация&NewLine;на&nbsp;главной&NewLine;странице</h4>
+              <h3 class="instructions-grid__card__id">03</h3>
+            </div>
+            <p class="card-description">Если эксперты сделали вывод об&nbsp;оригинальности товара и&nbsp;соответствии описанию.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Оформление&NewLine;заказа</h4>
+              <h3 class="instructions-grid__card__id">04</h3>
+            </div>
+            <p class="card-description">Выберите удобный пункт самовывоза в&nbsp;приложении 
+              и укажите данные получателя.</p>
+          </article>
+          <article class="instructions-grid__card">
+            <div class="instructions-grid__card__header-id-container">
+              <h4 class="card-title">Получение&NewLine;товара</h4>
+              <h3 class="instructions-grid__card__id">05</h3>
+            </div>
+            <p class="card-description">Убедитесь, что товар соответствует описанию. После&nbsp;вашего подтверждения деньги за&nbsp;заказ перечислятся на&nbsp;счёт продавца.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Screen ticker brands -->
-    <section class="screen brands-screen">
-      <div class="caption-chip_with-arrow">Гарантия оригинальности
-        <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
-      </div>
-      <div class="ticker-container">
-        <div class="ticker-wrapper">
-          <div class="ticker__items marquee">
-            <div class="item">
-              <img src="public/pictures/brands/burberry-logo.png">
+    <div class="screen brands-screen">
+      <div class="screen-content-wrapper_centred">
+        <div class="caption-chip_with-arrow">Гарантия оригинальности
+          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"/>
+        </div>
+        <div class="ticker-container">
+          <div class="ticker-wrapper">
+            <div class="ticker__items marquee">
+              <div class="ticker__item">
+                <img src="public/pictures/brands/burberry-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/chloe-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/dg-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/nike-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/adidas-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/nb-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/ysl-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/versace.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/moschino-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/ralph-logo.png" aria-hidden="true">
+              </div>
             </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/chloe-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/dg-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/nike-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/adidas-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/nb-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/ysl-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/versace.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/moschino-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/ralph-logo.png">
+            <div aria-hidden="true" class="ticker__items marquee">
+              <div class="ticker__item">
+                <img src="public/pictures/brands/burberry-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/chloe-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/dg-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/nike-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/adidas-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/nb-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/ysl-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/versace.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/moschino-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/ralph-logo.png" aria-hidden="true">
+              </div>
             </div>
           </div>
-          <div aria-hidden="true" class="ticker__items marquee">
-            <div class="ticker__item">
-              <img src="public/pictures/brands/burberry-logo.png">
+          <div class="ticker-wrapper">
+            <div class="ticker__items marquee ticker_reverse">
+              <div class="ticker__item">
+                <img src="public/pictures/brands/tommy-hilfiger-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/gucci-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/lv.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/stone-island-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/supreme-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/nike-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/chloe-logo.png" aria-hidden="true">
+              </div>
             </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/chloe-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/dg-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/nike-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/adidas-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/nb-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/ysl-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/versace.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/moschino-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/ralph-logo.png">
+            <div aria-hidden="true" class="ticker__items marquee ticker_reverse">
+              <div class="ticker__item">
+                <img src="public/pictures/brands/tommy-hilfiger-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/gucci-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/adidas-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/lv.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/stone-island-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/supreme-logo.png" aria-hidden="true">
+              </div>
+              <div class="ticker__item">
+                <img src="public/pictures/brands/chloe-logo.png" aria-hidden="true">
+              </div>
             </div>
           </div>
         </div>
-        <div class="ticker-wrapper">
-          <div class="ticker__items marquee ticker_reverse">
-            <div class="ticker__item">
-              <img src="public/pictures/brands/tommy-hilfiger-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/gucci-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/lv.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/stone-island-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/supreme-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/nike-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/chloe-logo.png">
-            </div>
-          </div>
-          <div aria-hidden="true" class="ticker__items marquee ticker_reverse">
-            <div class="ticker__item">
-              <img src="public/pictures/brands/tommy-hilfiger-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/gucci-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/adidas-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/lv.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/stone-island-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/supreme-logo.png">
-            </div>
-            <div class="ticker__item">
-              <img src="public/pictures/brands/chloe-logo.png">
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
     
     <!-- Screen blog -->
     <section class="screen blog-screen">
-      <div class="blog-screen-bgr">
-        <div class="blog-screen__content">
-          <div class="blog-screen__content__header-description-wrapper">
-            <h2 class="page-header">Наш блог</h2>
-            <h3 class="page-description">Пишем о&nbsp;моде и&nbsp;рассказываем,&NewLine;как&nbsp;разрабатывается сервис</h3>
-          </div>
-          <button class="page__cta-button page__cta-button_black button_large">
-            Читать
-            <div class="arrow">
-              <svg width="20" height="20" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 13L13 1M13 1L1.64864 1M13 1L13 12.172" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+      <div class="screen-content-wrapper_centred">
+        <div class="blog-screen-bgr">
+          <div class="blog-screen__content">
+            <div class="blog-screen__content__header-description-wrapper">
+              <h2 class="page-header">Наш блог</h2>
+              <h3 class="page-description">Пишем о&nbsp;моде и&nbsp;рассказываем,&NewLine;как&nbsp;разрабатывается сервис</h3>
             </div>
-          </button>
+            <a target="_blank" href="https://journal.looton.ru" class="page__cta-button page__cta-button_black button_large">
+              Читать
+              <div class="arrow">
+                <svg width="20" height="20" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L13 1M13 1L1.64864 1M13 1L13 12.172" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Screen download app -->
     <section class="screen download-screen">
-      <div class="download-screen__left">
-        <div class="caption-chip_white">Скачайте приложение</div>
-        <h2 class="page-header__gradient__medium">Покупайте и&nbsp;продавайте оригинальные брендовые вещи в&nbsp;приложении</h2>
-        <div class="download-screen__buttons-container">
-          <!-- To-do: buttons-actions -->
-          <button class="page__cta-button button_white button_large">для iOS<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></button>
-          <button class="page__cta-button button_white button_large">для Android<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></button>
+      <div class="screen-content-wrapper_left">
+        <div class="download-screen__content">
+          <div class="screen-content__left-part">
+            <div class="download-screen-content__header-description-container">
+              <div class="caption-chip_white">Скачайте приложение</div>
+              <h2 class="text-bold_grey-gradient text_medium">Покупайте и&nbsp;продавайте&NewLine;оригинальные брендовые&NewLine;вещи в&nbsp;приложении</h2>
+            </div>
+            <a href="#launch-form" id="download-mobile-button" class="a-tag_cta page__cta-button button_white button_large hiddden">Скачать<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
+            <div class="download-screen__buttons-container">
+              <a href="#launch-form" class="a-tag_cta page__cta-button button_white button_large">для iOS<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
+              <a href="#launch-form" class="a-tag_cta page__cta-button button_white button_large">для Android<img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
+            </div>
+          </div>
+          <div class="application-screen-container_medium">
+            <img class="application-screen" src="public/pictures/screen-scarf.png" alt="looton application item screen" />
+          </div>
         </div>
-      </div>
-      <div class="application-screen-container">
-        <img class="application-screen" src="public/pictures/screen-scarf.png" alt="looton application item screen" />
       </div>
     </section>
 
-    <section class="screen screen-launch-form">
+    <section class="screen screen-launch-form" id="launch-form">
       <div class="screen-launch-form__container">
-        <div class="screen-launch-form__container__left">
-          <h2 class="page-header">Узнайте о&nbsp;запуске&NewLine;Looton первым</h2>
-          <h3 class="page-description">Пока что сервис в&nbsp;разработке. Оставьте свой&NewLine;e-mail и&nbsp;мы уведомим вас о&nbsp;запуске Looton.</h3>
-          <form class="launch-form">
-            <div class="screen-launch-form__fields-container">
-            <div class="screen-launch-form__input-label-container">
-              <label for="launch-form-email" class="screen-launch-form__input-label">Email</label>
-              <input class="screen-launch-form__input" type="email" id="launch-form-email"/>
-            </div>
-            <button class="page__cta-button page__cta-button_black button_large">
-              Напомните мне
-              <div class="arrow">
-                <svg width="20" height="20" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 13L13 1M13 1L1.64864 1M13 1L13 12.172" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+        <div class="screen-content-wrapper_left">
+          <div class="screen-launch-form__container__left">
+            <h2 class="page-header">Узнайте о&nbsp;запуске&NewLine;Looton первым</h2>
+            <h3 class="page-description">Пока что сервис в&nbsp;разработке. Оставьте свой&NewLine;e-mail и&nbsp;мы уведомим вас о&nbsp;запуске Looton.</h3>
+            <form class="launch-form" onsubmit="return false">
+              <div class="screen-launch-form__fields-container">
+                <div class="screen-launch-form__input-label-container">
+                  <label for="launch-form-email" class="screen-launch-form__input-label">Email</label>
+                  <input class="screen-launch-form__input" type="email" id="launch-form-email" required />
+                </div>
+                <button class="page__cta-button page__cta-button_black button_large" id="launch-form-submit-btn" type="submit">
+                  Напомните мне
+                  <svg class="arrow" width="20" height="20" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L13 1M13 1L1.64864 1M13 1L13 12.172" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
               </div>
-            </button>
+            </form>
           </div>
-          </form>
         </div>
       </div>
     </section>
 
     <!-- Screen FAQ -->
-    <section class="screen screen-faq">
-      <div class="customer-seller-toggle-container">
-        <button class="customer-seller-toggle customer-seller-toggle__checked" id="chip-faq__sellers">
-          Для продавцов 
-          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
-        </button>
-        <button class="customer-seller-toggle" id="chip-faq__customers">
-          Для покупателей 
-          <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true"></img>
-        </button>
-      </div>
-      <h2 class="page-header">Спрашивают чаще всего</h2>
-      <div class="faq-container faq__sellers">
-        <article class="faq-question-answer">
-          <label for="answer_seller_first" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Какой процент берёт Looton за&nbsp;продажу?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_seller_first" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Размещение первого объявления на&nbsp;платформе Looton –– бесплатно. С&nbsp;каждой последующей продажи сервис берёт комиссию, которая не&nbsp;превышает 5%.</p>
-        </article>
+    <section class="screen screen-faq" id="faq">
+      <div class="screen-content-wrapper_left">
+        <div class="customer-seller-toggle-container">
+          <button class="chip-customer-seller-toggle chip-customer-seller-toggle__checked" id="chip-faq__sellers">
+            Для продавцов 
+            <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" />
+          </button>
+          <button class="chip-customer-seller-toggle" id="chip-faq__customers">
+            Для покупателей 
+            <img class="arrow" src="public/icons/arrow_2px.svg" aria-hidden="true" />
+          </button>
+        </div>
+        <h2 class="page-header">Спрашивают чаще всего</h2>
+        <div class="faq-container faq__sellers" id="faq__sellers">
+          <article class="faq-question-answer">
+            <label for="answer_seller_first" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Какой процент берёт Looton за&nbsp;продажу?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_seller_first" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Размещение первого объявления на&nbsp;платформе Looton –– бесплатно. С&nbsp;каждой последующей продажи сервис берёт комиссию, которая не&nbsp;превышает 5%.</p>
+          </article>
 
-        <article class="faq-question-answer">
-          <label for="answer_seller_second" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Как получить деньги?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_seller_second" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Для&nbsp;поступления средств понадобится только номер карты. Укажите его при&nbsp;создании объявления.</p>
-        </article>
+          <article class="faq-question-answer">
+            <label for="answer_seller_second" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Как получить деньги?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_seller_second" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Для&nbsp;поступления средств понадобится только номер карты. Укажите его при&nbsp;создании объявления.</p>
+          </article>
 
-        <article class="faq-question-answer">
-          <label for="answer_seller_third" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Можно ли продавать подделку?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_seller_third" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Наши модераторы и&nbsp;эксперты проверяют каждое объявление на&nbsp;соответствие описанию и&nbsp;подлинность. В&nbsp;случае, если удалось установить подделку, аккаунт будет заблокирован на&nbsp;платформе навсегда. </p>
-        </article>
+          <article class="faq-question-answer">
+            <label for="answer_seller_third" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Можно ли продавать подделку?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_seller_third" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Наши модераторы и&nbsp;эксперты проверяют каждое объявление на&nbsp;соответствие описанию и&nbsp;подлинность. В&nbsp;случае, если удалось установить подделку, аккаунт будет заблокирован на&nbsp;платформе навсегда. </p>
+          </article>
 
-        <article class="faq-question-answer">
-          <label for="answer_seller_fourth" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Есть ли возможность продавать в&nbsp;большом количестве?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_seller_fourth" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Да. Вы можете указать размер и&nbsp;количество товара (до 100 шт.) при&nbsp;создании лота.</p>
-        </article>
+          <article class="faq-question-answer">
+            <label for="answer_seller_fourth" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Есть ли возможность продавать в&nbsp;большом количестве?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_seller_fourth" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Да. Вы можете указать размер и&nbsp;количество товара (до 100 шт.) при&nbsp;создании лота.</p>
+          </article>
 
-        <article class="faq-question-answer">
-          <label for="answer_seller_fifth" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Моя вещь может потеряться или&nbsp;получить повреждения во&nbsp;время доставки?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_seller_fifth" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Мы доверяем доставку заказов ТК СДЭК –– лидеру российской логистики. Если посылка теряется, обычно её быстро находят. К сожалению, нельзя полностью исключить вероятность повреждений товара. Если товар пришел с&nbsp;повреждением, мы выплатим 100% денежную компенсацию продавцу.</p>
-        </article>
-      </div>
-
-      
-
-      <div class="faq-container faq__customers hidden">
-        <article class="faq-question-answer">
-          <label for="answer_customer_first" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Безопасно ли&nbsp;это?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_customer_first" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Да, Looton берёт на&nbsp;себя ответственность за&nbsp;безопасность сделки. При&nbsp;покупке лота банк резервирует денежные средства, а&nbsp;затем отправляет их на&nbsp;счёт Looton. Фактическое списание средств происходит только после того, как&nbsp;покупатель подтвердит, что с&nbsp;товаром всё в&nbsp;порядке.</p>
-        </article>
-
-        <article class="faq-question-answer">
-          <label for="answer_customer_second" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Я могу быть уверен, что&nbsp;покупаю оригинал?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_customer_second" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Да, мы гарантируем подлинность изделия. Наши модераторы и&nbsp;эксперты проверяют каждое объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
-        </article>
-
-        <article class="faq-question-answer">
-          <label for="answer_customer_third" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Сколько занимает доставка?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_customer_third" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">В&nbsp;среднем доставка занимает до&nbsp;7 рабочих дней.</p>
-        </article>
+          <article class="faq-question-answer">
+            <label for="answer_seller_fifth" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Моя вещь может потеряться или&nbsp;получить повреждения во&nbsp;время доставки?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_seller_fifth" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Мы доверяем доставку заказов ТК СДЭК –– лидеру российской логистики. Если посылка теряется, обычно её быстро находят. К сожалению, нельзя полностью исключить вероятность повреждений товара. Если товар пришел с&nbsp;повреждением, мы выплатим 100% денежную компенсацию продавцу.</p>
+          </article>
+        </div>
         
-        <article class="faq-question-answer">
-          <label for="answer_customer_fourth" class="faq-question-answer__header-icon-container">
-            <h4 class="card-title">Я&nbsp;могу быть уверен, что посылка придет в&nbsp;сохранности?</h4>
-            <div class="faq-question-answer__icon-wrap">
-              <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
-            </div>
-          </label>
-          <input id="answer_customer_fourth" type="checkbox"></input>
-          <p class="card-description card-description_shortened faq-answer">Каждая посылка застрахована. Если товар пришел с&nbsp;повреждением, мы компенсируем ваши затраты на&nbsp;доставку.</p>
-        </article>
+
+        <div class="faq-container faq__customers hidden" id="faq__customers">
+          <article class="faq-question-answer">
+            <label for="answer_customer_first" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Безопасно ли&nbsp;это?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_customer_first" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Да, Looton берёт на&nbsp;себя ответственность за&nbsp;безопасность сделки. При&nbsp;покупке лота банк резервирует денежные средства, а&nbsp;затем отправляет их на&nbsp;счёт Looton. Фактическое списание средств происходит только после того, как&nbsp;покупатель подтвердит, что с&nbsp;товаром всё в&nbsp;порядке.</p>
+          </article>
+
+          <article class="faq-question-answer">
+            <label for="answer_customer_second" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Я могу быть уверен, что&nbsp;покупаю оригинал?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_customer_second" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Да, мы гарантируем подлинность изделия. Наши модераторы и&nbsp;эксперты проверяют каждое объявление на&nbsp;соответствие описанию и&nbsp;подлинность.</p>
+          </article>
+
+          <article class="faq-question-answer">
+            <label for="answer_customer_third" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Сколько занимает доставка?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_customer_third" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">В&nbsp;среднем доставка занимает до&nbsp;7 рабочих дней.</p>
+          </article>
+          
+          <article class="faq-question-answer">
+            <label for="answer_customer_fourth" class="faq-question-answer__header-icon-container">
+              <h4 class="card-title">Я&nbsp;могу быть уверен, что посылка придет в&nbsp;сохранности?</h4>
+              <div class="faq-question-answer__icon-wrap">
+                <img class="plus-icon" src="public/icons/plus-icon.svg" alt="answer-toggle">
+              </div>
+            </label>
+            <input id="answer_customer_fourth" type="checkbox" />
+            <p class="card-description card-description_shortened faq-answer">Каждая посылка застрахована. Если товар пришел с&nbsp;повреждением, мы компенсируем ваши затраты на&nbsp;доставку.</p>
+          </article>
+        </div>
       </div>
     </section>
+
+    <footer class="looton-footer" id="contacts">
+      <div class="screen-content-wrapper_centred">
+        <div class="footer-content">
+          <div class="footer__logo-nav-container">
+            <div class="footer__logo-contacts-container">
+              <div class="looton-logo">
+                <svg width="119" height="40" viewBox="0 0 119 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M108.512 18.424C105.878 18.424 103.244 19.896 103.244 23.064V31H99.0552V15H103.244V18.552C104.355 16.472 106.703 14.52 109.718 14.52C114.033 14.52 116.509 17.4 116.509 21.752V31H112.32V22.264C112.32 19.992 111.019 18.424 108.512 18.424Z" fill="currentColor"/>
+                  <path d="M84.5195 14.4561C89.8189 14.4561 94.3885 17.4961 94.3885 22.8401C94.3885 27.6401 90.2632 31.5761 84.5195 31.5761C78.7757 31.5761 74.6504 27.6401 74.6504 22.8401C74.6504 17.4961 79.22 14.4561 84.5195 14.4561ZM84.5195 18.1361C81.2192 18.1361 78.8709 19.8641 78.8709 22.8401C78.8709 25.5281 81.3779 27.9281 84.5195 27.9281C87.6611 27.9281 90.168 25.5281 90.168 22.8401C90.168 19.8641 87.8197 18.1361 84.5195 18.1361Z" fill="currentColor"/>
+                  <path d="M57.2266 18.6802V15.3202L60.3682 15.1282L60.9394 10.2002H64.43V15.0002H71.0306V18.6802H64.43V24.7282C64.43 26.4562 65.3503 27.6402 67.0004 27.6402C68.238 27.6402 69.6343 27.1282 70.6498 26.4882L71.57 30.1042C70.2372 30.8082 67.9842 31.5442 66.3023 31.5442C62.3674 31.5442 60.2412 28.9202 60.2412 24.8882V18.6802H57.2266Z" fill="currentColor"/>
+                  <path d="M44.4363 14.4561C49.7358 14.4561 54.3054 17.4961 54.3054 22.8401C54.3054 27.6401 50.1801 31.5761 44.4363 31.5761C38.6926 31.5761 34.5673 27.6401 34.5673 22.8401C34.5673 17.4961 39.1369 14.4561 44.4363 14.4561ZM44.4363 18.1361C41.1361 18.1361 38.7878 19.8641 38.7878 22.8401C38.7878 25.5281 41.2947 27.9281 44.4363 27.9281C47.5779 27.9281 50.0849 25.5281 50.0849 22.8401C50.0849 19.8641 47.7366 18.1361 44.4363 18.1361Z" fill="currentColor"/>
+                  <path d="M21.0789 14.4561C26.3784 14.4561 30.948 17.4961 30.948 22.8401C30.948 27.6401 26.8226 31.5761 21.0789 31.5761C15.3352 31.5761 11.2098 27.6401 11.2098 22.8401C11.2098 17.4961 15.7794 14.4561 21.0789 14.4561ZM21.0789 18.1361C17.7786 18.1361 15.4304 19.8641 15.4304 22.8401C15.4304 25.5281 17.9373 27.9281 21.0789 27.9281C24.2205 27.9281 26.7274 25.5281 26.7274 22.8401C26.7274 19.8641 24.3792 18.1361 21.0789 18.1361Z" fill="currentColor"/>
+                  <path d="M6.53707 31H2.38V7H6.53707V31Z" fill="currentColor"/>
+                </svg>            
+              </div>
+              <h2 class="footer-contacts">support@looton.ru</h2>
+            </div>
+            <nav class="footer-navigation">
+              <a class="footer-navigation__link" href="#about-us">О&nbsp;нас</a>
+              <a class="footer-navigation__link" href="#profits">Преимущества</a> 
+              <a class="footer-navigation__link" href="#faq">FAQ</a> 
+              <a class="footer-navigation__link" href="#contacts">Контакты</a> 
+            </nav>
+          </div>
+
+          <div class="footer__info-payment-methods-container">
+            <div class="copyright-web-development-container">
+              <p class="tiny-text">2024 © Looton</p>
+              <a class="tiny-text web-development-link" href="https://t.me/alliznat/">Разработка сайта<img src="public/icons/arrow_2px.svg" aria-hidden="true" /></a>
+            </div>
+            <div class="payment-methods-container">
+              <div class="payment-method-icon-wrapper">
+                <img alt="visa payment supported" src="public/icons/Visa-logo.png" />
+              </div>
+              <div class="payment-method-icon-wrapper">
+                <img alt="union pay payment supported" src="public/icons/UnionPay-logo.png" />
+              </div>
+              <div class="payment-method-icon-wrapper">
+                <img alt="mastercard payment supported" src="public/icons/Mastercard-logo.png" />
+              </div>
+              <div class="payment-method-icon-wrapper">
+                <img alt="maestro payment supported" src="public/icons/Maestro-logo.png" />
+              </div>
+              <div class="payment-method-icon-wrapper">
+                <img alt="mir payment supported" src="public/icons/Mir-logo.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="screen-launch-form_popup hidden" id="launch-form_popup">
+      <div class="screen-launch-form_popup__header">
+        <button class="screen-launch-form_popup__header-cross-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+            <path d="M6.8689 7.80859L21.011 21.9507" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7.27283 21.9502L21.415 7.80806" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="screen-launch-form_popup__content">
+        <div class="screen-launch-form_popup__content__icon" id="launch-form_popup__content__icon">
+          <img src="public/icons/success-icon.svg" aria-hidden="true" />
+        </div>
+        <div class="screen-launch-form_popup__content__text-wrapper">
+          <h3 class="screen-launch-form_popup__title" id="launch-form_popup__title">Email отправлен</h3>
+          <p class="screen-launch-form_popup__description" id="launch-form_popup__description">Мы пришлём уведомление&NewLine;о запуске</p>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>

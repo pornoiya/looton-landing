@@ -11,8 +11,8 @@ export function toggleCustomerSeller(sellersChipId, customersChipId,
 
   const sellersInstructionsChip = document.getElementById(sellersChipId)
   const customersInstructionsChip = document.getElementById(customersChipId)
-  const sellersInstructions = document.getElementsByClassName(sellersContentClassName)?.[0]
-  const customersInstructions = document.getElementsByClassName(customersContentClassName)?.[0]
+  const sellersInstructions = document.getElementById(sellersContentClassName)
+  const customersInstructions = document.getElementById(customersContentClassName)
 
   sellersInstructionsChip.addEventListener('click', function () {
     customersInstructionsChip.classList.remove(classChecked);
