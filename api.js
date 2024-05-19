@@ -28,6 +28,10 @@ export async function onSumbit() {
 
     const email = emailField?.value;
 
+    if (!email) {
+        return;
+    }
+
     if (checkEmail(email)) {
         const url = "http://dev.looton.ru/promo/v1/email";
         const requestOptions = {

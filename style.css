@@ -960,10 +960,12 @@ svg {
   letter-spacing: -0.03rem;
 }
 
-/* .show-popup   */
-
 body.show-popup > *:not(.screen-launch-form_popup) {
   filter: blur(8px);
+}
+
+body.show-popup .page__cta-button, body.show-popup .page__cta-button .arrow {
+  transform: none;
 }
 
 .screen-launch-form_popup {
