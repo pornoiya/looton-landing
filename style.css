@@ -1394,7 +1394,6 @@ body.show-popup > *:not(.screen-launch-form_popup) {
     background: rgba(82, 82, 82, 0.45);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    transform: translateX(0px);
   }
 
   #mobile-nav-menu {
@@ -1403,8 +1402,9 @@ body.show-popup > *:not(.screen-launch-form_popup) {
 
   #mobile-nav-menu:checked ~ .main-screen__content .menu-sheet {
     transform: translateX(800px);
-    transition: transform 1s linear;
+    transition: transform .1s linear;
   }
+
 
   :not(#mobile-nav-menu:checked) ~ .main-screen__content .menu-sheet {
     transition: transform .1s linear;
