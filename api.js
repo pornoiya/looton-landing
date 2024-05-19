@@ -4,6 +4,10 @@ function checkEmail(email) {
     .match(/^\S+@\S+$/);
 }
 
+const EMAIL_IS_EXIST_IN_PROMO_ERROR_CODE = "EMAIL_IS_EXIST_IN_PROMO";
+const EMAIL_IS_NOT_CORRECT_ERROR_CODE = "EMAIL_IS_NOT_CORRECT";
+const CANNOT_ADD_EMAIL_IN_PROMO_ERROR_CODE = "CANNOT_ADD_EMAIL_IN_PROMO";
+
 export async function onSumbit() {
     const emailField = document.getElementById("launch-form-email");
     const successPopup = document.getElementById("screen-launch-form_popup-success");
@@ -11,20 +15,47 @@ export async function onSumbit() {
     const errorPopup = document.getElementById("screen-launch-form_popup-error");
     const email = emailField?.value;
 
-    const body = document.getElementsByTagName("body")?.[0];
-
     if (checkEmail(email)) {
-        body.classList.add("show-popup"); 
-        successPopup.classList.remove("hidden");
+        const url = "http://dev.looton.ru/promo/v1/email";
         const requestOptions = {
-            method: 'PUT',
+            method: "PUT",
             headers: { 
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
              },
             body: JSON.stringify({ "email": email })
         }
-        fetch("http://dev.looton.ru/promo/v1/email", requestOptions)
+        try {
+            const response = await fetch(url, requestOptions);
+
+            if (response?.ok) {
+                const jsonRespoonse = await response.json();
+                if (jsonRespoonse.success) {
+                    openPopup(successPopup);
+                } else {
+                    const id = jsonRespoonse?.error?.id;
+                    if (id === EMAIL_IS_EXIST_IN_PROMO_ERROR_CODE) {
+                        openPopup(emailPopup);
+                    } else if (id === CANNOT_ADD_EMAIL_IN_PROMO_ERROR_CODE) {
+                        openPopup(errorPopup);
+                    } else {
+                        console.log("ERRROR");
+                    }
+                }
+            }
+        }
+        catch (error) {
+            console.error(`Error submitting email ${email}: ${error}`);
+        }
+        // body.classList.add("show-popup"); 
+        // successPopup.classList.remove("hidden");
     }
+}
+
+function openPopup(popup) {
+    const body = document.getElementsByTagName("body")?.[0];
+
+    body.classList.add("show-popup"); 
+    popup.classList.remove("hidden");
 }
 
 export function onPopupClose() {
