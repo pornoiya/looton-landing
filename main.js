@@ -12,7 +12,6 @@ toggleCustomerSeller("chip-faq__sellers", "chip-faq__customers",
 );
 
 const submitButton = document.getElementById("launch-form-submit-btn");
-
 submitButton.addEventListener('click', onSumbit)
 
 const popupCrossButton = document.getElementsByClassName("screen-launch-form_popup__header-cross-wrapper");
