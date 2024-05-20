@@ -1,3 +1,6 @@
+import { API_URL } from "./const";
+
+
 const EMAIL_IS_EXIST_IN_PROMO_ERROR_CODE = "EMAIL_IS_EXIST_IN_PROMO";
 const CANNOT_ADD_EMAIL_IN_PROMO_ERROR_CODE = "CANNOT_ADD_EMAIL_IN_PROMO";
 
@@ -28,12 +31,12 @@ export async function onSumbit() {
 
     const email = emailField?.value;
 
-    if (!email) {
+    if (!email?.trim()) {
         return;
     }
 
     if (checkEmail(email)) {
-        const url = "http://dev.looton.ru/promo/v1/email";
+        const url = API_URL;
         const requestOptions = {
             method: "PUT",
             headers: { 

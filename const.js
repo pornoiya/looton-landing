@@ -1,0 +1,1 @@
+export const API_URL = "http://dev.looton.ru/promo/v1/email"
