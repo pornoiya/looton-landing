@@ -47,6 +47,7 @@ export async function onSumbit() {
             body: JSON.stringify({ "email": email })
         }
         try {
+            submitButton.disabled = true;
             submitButton.innerHTML = '<div class="spinner-container"><div class="spinner"></div></div>'
 
             const response = await fetch(url, requestOptions);
@@ -78,7 +79,9 @@ export async function onSumbit() {
     } else {
         openPopup(ERROR_POPUP, "Невалидный e-mail");
     }
+
     submitButton.innerHTML = buttonChildren
+    submitButton.disabled = false;
 }
 
 /**
