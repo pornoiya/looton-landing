@@ -968,6 +968,10 @@ body.show-popup .page__cta-button, body.show-popup .page__cta-button .arrow {
   transform: none;
 }
 
+.looton-logo__dark-filter {
+  filter: invert(78%) sepia(5%) saturate(27%) hue-rotate(11deg) brightness(96%) contrast(89%);
+}
+
 .screen-launch-form_popup {
   width: 400px;
   height: 230px;
