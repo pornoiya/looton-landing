@@ -65,6 +65,32 @@ button {
   width: fit-content;
 }
 
+/* Spinner */
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 269px;
+}
+
+/* Spinner styling */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    border-top: 5px solid var(--looton-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .menu-sheet {
   display: none;
 }
@@ -966,6 +992,10 @@ body.show-popup > *:not(.screen-launch-form_popup) {
 
 body.show-popup .page__cta-button, body.show-popup .page__cta-button .arrow {
   transform: none;
+}
+
+.looton-logo__dark-filter {
+  filter: invert(78%) sepia(5%) saturate(27%) hue-rotate(11deg) brightness(96%) contrast(89%);
 }
 
 .screen-launch-form_popup {

@@ -28,6 +28,8 @@ function checkEmail(email) {
 
 export async function onSumbit() {
     const emailField = document.getElementById("launch-form-email");
+    const submitButton = document.getElementById('launch-form-submit-btn')
+    const buttonChildren = submitButton.innerHTML
 
     const email = emailField?.value;
 
@@ -45,6 +47,9 @@ export async function onSumbit() {
             body: JSON.stringify({ "email": email })
         }
         try {
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<div class="spinner-container"><div class="spinner"></div></div>'
+
             const response = await fetch(url, requestOptions);
             const jsonRespoonse = await response.json();
 
@@ -74,6 +79,9 @@ export async function onSumbit() {
     } else {
         openPopup(ERROR_POPUP, "Невалидный e-mail");
     }
+
+    submitButton.innerHTML = buttonChildren
+    submitButton.disabled = false;
 }
 
 /**
