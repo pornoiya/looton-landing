@@ -1,8 +1,8 @@
-# Website for Looton – Second-Hand Platform
+# Landing for Looton – Second-Hand Platform
 
 [**Looton**](https://looton.ru/) is a modern second-hand marketplace focused on making the process of discovering, browsing, and purchasing pre-owned items simple and visually engaging.
 
-The website was built as a dedicated frontend experience for the platform, with an emphasis on clean navigation, product discovery, strong visual presentation, and a contemporary marketplace aesthetic.
+The landing was built as a dedicated frontend experience for the platform with a strong visual presentation.
 
 **Design & frontend:** @pornoiya
 
